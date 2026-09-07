@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://craftsuite-central.imrankazmi98.workers.dev/sitemap.xml
+Sitemap: https://craftsuite-central.craftsuite-hub.workers.dev/sitemap.xml
