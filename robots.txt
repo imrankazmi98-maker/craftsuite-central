@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://craftsuite-central.craftsuite-hub.workers.dev/sitemap.xml
