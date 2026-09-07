@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Online Word Counter & Text Case Converter | SEO Utility Tool</title>
+    <meta name="description" content="Free real-time online word counter, character count tool, reading time estimator, and text case converter for writers, students, and SEO specialists.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .gradient-bg {
+            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+    </style>
+    <!-- Schema Markup for AdSense & Google SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "Text & SEO Utility Hub",
+      "operatingSystem": "All",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Real-time word counter, character limit checker, and text case converter tool.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between">
+
+    <!-- Header / Navbar -->
+    <header class="gradient-bg text-white shadow-md py-4 px-6">
+        <div class="max-w-6xl mx-auto flex justify-between items-center">
+            <h1 class="text-xl font-bold tracking-wide flex items-center gap-2">
+                ⚡ TextCraft Studio
+            </h1>
+            <span class="text-xs bg-emerald-500 text-slate-900 px-3 py-1 rounded-full font-semibold">100% Client-Side Fast</span>
+        </div>
+    </header>
+
+    <!-- Main Tool Workspace -->
+    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
+        
+        <!-- Tool Container -->
+        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-8 mb-10">
+            <div class="mb-4 flex justify-between items-center">
+                <h2 class="text-2xl font-bold text-slate-900">Word Counter & Text Analyzer</h2>
+                <button onclick="clearText()" class="text-xs text-red-500 hover:text-red-700 font-medium">Clear Text</button>
+            </div>
+
+            <!-- Input Area -->
+            <textarea id="textInput" placeholder="Paste or type your content here to calculate words, characters, reading time, and change formatting..." 
+                class="w-full h-64 p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition text-slate-700 font-normal resize-y"
+                oninput="analyzeText()"></textarea>
+
+            <!-- Real-time Stats Grid -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-6">
+                <div class="bg-slate-100 p-4 rounded-xl text-center">
+                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Words</span>
+                    <span id="wordCount" class="text-2xl font-black text-slate-900">0</span>
+                </div>
+                <div class="bg-slate-100 p-4 rounded-xl text-center">
+                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Characters</span>
+                    <span id="charCount" class="text-2xl font-black text-slate-900">0</span>
+                </div>
+                <div class="bg-slate-100 p-4 rounded-xl text-center">
+                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">No Spaces</span>
+                    <span id="noSpaceCharCount" class="text-2xl font-black text-slate-900">0</span>
+                </div>
+                <div class="bg-slate-100 p-4 rounded-xl text-center">
+                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Sentences</span>
+                    <span id="sentenceCount" class="text-2xl font-black text-slate-900">0</span>
+                </div>
+                <div class="bg-slate-100 p-4 rounded-xl text-center">
+                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Paragraphs</span>
+                    <span id="paraCount" class="text-2xl font-black text-slate-900">0</span>
+                </div>
+                <div class="bg-slate-100 p-4 rounded-xl text-center">
+                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Reading Time</span>
+                    <span id="readTime" class="text-xl font-bold text-slate-900">0m</span>
+                </div>
+            </div>
+
+            <!-- Action Buttons Bar -->
+            <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-slate-100">
+                <button onclick="transformText('uppercase')" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">UPPERCASE</button>
+                <button onclick="transformText('lowercase')" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">lowercase</button>
+                <button onclick="transformText('titlecase')" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">Title Case</button>
+                <button onclick="transformText('sentencecase')" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">Sentence case</button>
+                <button onclick="copyToClipboard()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium ml-auto">Copy Output</button>
+            </div>
+        </div>
+
+        <!-- Ad Placement Placeholder (For Future AdSense Integration) -->
+        <div class="my-8 text-center p-4 border border-dashed border-slate-300 rounded-lg text-slate-400 text-xs">
+            [ Advertisement Space ]
+        </div>
+
+        <!-- Comprehensive Supporting SEO Content Section (Prevents Thin Content Rejection) -->
+        <article class="prose max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-slate-700">
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Mastering Content Length: Complete Guide for SEO & Social Media</h2>
+            <p class="mb-4">Whether you are drafting an academic research paper, writing an engaging blog post, or preparing social media captions, knowing your exact word and character counts is critical for maximum reach and optimal user engagement.</p>
+
+            <h3 class="text-xl font-semibold text-slate-900 mt-6 mb-3">Optimal Character & Word Count Limits</h3>
+            <div class="overflow-x-auto my-4">
+                <table class="w-full text-left border-collapse border border-slate-200 text-sm">
+                    <thead>
+                        <tr class="bg-slate-100">
+                            <th class="p-3 border border-slate-200 font-semibold">Platform / Use Case</th>
+                            <th class="p-3 border border-slate-200 font-semibold">Recommended Limit</th>
+                            <th class="p-3 border border-slate-200 font-semibold">Key Objective</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="p-3 border border-slate-200">Google Meta Description</td>
+                            <td class="p-3 border border-slate-200">155 - 160 characters</td>
+                            <td class="p-3 border border-slate-200">Prevents snippet truncation in search results.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border border-slate-200">Google SEO Title Tag</td>
+                            <td class="p-3 border border-slate-200">50 - 60 characters</td>
+                            <td class="p-3 border border-slate-200">Optimal display across desktop and mobile screens.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border border-slate-200">Long-Form Blog Articles</td>
+                            <td class="p-3 border border-slate-200">1,500 - 2,500 words</td>
+                            <td class="p-3 border border-slate-200">Higher probability of ranking on page 1 of Google.</td>
+                        </tr>
+                        <tr>
+                            <td class="p-3 border border-slate-200">X (Twitter) Post</td>
+                            <td class="p-3 border border-slate-200">280 characters</td>
+                            <td class="p-3 border border-slate-200">Concise updates and audience interaction.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <h3 class="text-xl font-semibold text-slate-900 mt-6 mb-3">Frequently Asked Questions (FAQs)</h3>
+            <div class="space-y-4">
+                <div>
+                    <h4 class="font-bold text-slate-800">Q: How is reading time calculated?</h4>
+                    <p class="text-sm">A: Reading time is calculated based on an average adult reading speed of 200 words per minute (WPM).</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-800">Q: Is my text saved or sent to any server?</h4>
+                    <p class="text-sm">A: No. All calculations happen entirely inside your web browser using JavaScript. No data ever leaves your device.</p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs">
+        <p>© 2026 TextCraft Studio. Built for speed, privacy, and productivity.</p>
+    </footer>
+
+    <!-- Interactive JavaScript Logic -->
+    <script>
+        function analyzeText() {
+            const text = document.getElementById('textInput').value;
+
+            // Character Counts
+            const charCount = text.length;
+            const noSpaceCharCount = text.replace(/\s/g, '').length;
+
+            // Word Count
+            const trimmedText = text.trim();
+            const wordCount = trimmedText === '' ? 0 : trimmedText.split(/\s+/).length;
+
+            // Sentence Count
+            const sentenceCount = trimmedText === '' ? 0 : (text.match(/[^\.!\?]+[\.!\?]+/g) || []).length || (text.length > 0 ? 1 : 0);
+
+            // Paragraph Count
+            const paraCount = trimmedText === '' ? 0 : text.split(/\n+/).filter(p => p.trim().length > 0).length;
+
+            // Reading Time (Avg 200 WPM)
+            const minutes = Math.ceil(wordCount / 200);
+
+            // Update DOM
+            document.getElementById('wordCount').innerText = wordCount.toLocaleString();
+            document.getElementById('charCount').innerText = charCount.toLocaleString();
+            document.getElementById('noSpaceCharCount').innerText = noSpaceCharCount.toLocaleString();
+            document.getElementById('sentenceCount').innerText = sentenceCount.toLocaleString();
+            document.getElementById('paraCount').innerText = paraCount.toLocaleString();
+            document.getElementById('readTime').innerText = wordCount === 0 ? '0m' : `${minutes} min`;
+        }
+
+        function transformText(type) {
+            const input = document.getElementById('textInput');
+            let text = input.value;
+
+            if (!text) return;
+
+            if (type === 'uppercase') {
+                input.value = text.toUpperCase();
+            } else if (type === 'lowercase') {
+                input.value = text.toLowerCase();
+            } else if (type === 'titlecase') {
+                input.value = text.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+            } else if (type === 'sentencecase') {
+                input.value = text.toLowerCase().replace(/(^\s*|\.\s*)([a-z])/g, (match, separator, char) => separator + char.toUpperCase());
+            }
+
+            analyzeText();
+        }
+
+        function clearText() {
+            document.getElementById('textInput').value = '';
+            analyzeText();
+        }
+
+        function copyToClipboard() {
+            const text = document.getElementById('textInput').value;
+            if (!text) return;
+            navigator.clipboard.writeText(text).then(() => {
+                alert('Text copied to clipboard!');
+            });
+        }
+    </script>
+</body>
+</html>
