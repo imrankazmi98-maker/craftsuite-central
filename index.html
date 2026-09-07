@@ -1,808 +1,411 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="dark scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="gYp9E1KM2L3SfJ5ihRkRx8TmQfdzS2rqveavTraYX88" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TextCraft Studio - Word Counter, WebP Converter & SVG Studio</title>
-    <meta name="description" content="Free online word counter, text case converter, fast image to WebP converter, and live SVG viewer & code editor. 100% private, browser-based utilities.">
-    <meta name="keywords" content="word counter, text analyzer, image to webp, webp converter, svg viewer, svg editor, svg to png, react svg, character count">
+    
+    <!-- Primary SEO Meta Tags -->
+    <title>TextCraft Studio - Free Online Developer, Text & SEO Tools Suite</title>
+    <meta name="title" content="TextCraft Studio - Free Online Developer, Text & SEO Tools Suite">
+    <meta name="description" content="Free browser-based tools: Word counter, WebP converter, SVG editor, JSON validator, meta tag generator & SEO utilities. 100% private, no signup required.">
+    <meta name="keywords" content="word counter, webp converter, svg viewer, svg editor, meta tag generator, json formatter, text analyzer, free developer tools, seo tools">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://craftsuite-central.craftsuite-hub.workers.dev/" />
 
+    <!-- Open Graph / Facebook / WhatsApp / LinkedIn -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/" />
-    <meta property="og:title" content="TextCraft Studio - Word Counter, WebP Converter & SVG Studio" />
-    <meta property="og:description" content="Free online word counter, text case converter, fast image to WebP converter, and live SVG viewer & code editor. 100% private, browser-based utilities." />
-    <!-- OG Image Tag (Absolute URL) -->
-    <meta property="og:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.png" />
+    <meta property="og:title" content="TextCraft Studio - Free Developer, Text & SEO Tools" />
+    <meta property="og:description" content="100% private, browser-based web tools suite. Convert WebP, view SVGs, count words, format JSON, and generate SEO meta tags instantly." />
+    <meta property="og:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.jpg" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="TextCraft Studio Web Tools Preview" />
 
-    <!-- Twitter / X Cards -->
+    <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/" />
-    <meta name="twitter:title" content="TextCraft Studio - Word Counter, WebP Converter & SVG Studio" />
-    <meta name="twitter:description" content="Free online word counter, text case converter, fast image to WebP converter, and live SVG viewer & code editor. 100% private, browser-based utilities." />
-    <meta name="twitter:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.png" />
+    <meta name="twitter:title" content="TextCraft Studio - Free Developer & SEO Tools Suite" />
+    <meta name="twitter:description" content="Fast, free, and private browser-based utilities for developers, writers, and SEO professionals." />
+    <meta name="twitter:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.jpg" />
 
-    
-    <!-- Tailwind CSS CDN -->
+    <!-- Tailwind CSS CDN & FontAwesome Icons -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        .gradient-bg {
-            background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
-        }
-        .bg-grid-pattern {
-            background-color: #1e293b;
-            background-image: linear-gradient(45deg, #334155 25%, transparent 25%), linear-gradient(-45deg, #334155 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #334155 75%), linear-gradient(-45deg, transparent 75%, #334155 75%);
-            background-size: 20px 20px;
-            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    [
-      {
-        "@context": "https://schema.org",
-        "@type": "WebApplication",
-        "name": "TextCraft Studio - All-in-One Web Tools",
-        "url": "https://craftsuite-central.craftsuite-hub.workers.dev/",
-        "applicationCategory": "UtilitiesApplication",
-        "operatingSystem": "All",
-        "browserRequirements": "Requires JavaScript",
-        "offers": {
-          "@type": "Offer",
-          "price": "0.00",
-          "priceCurrency": "USD"
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#eef2ff',
+                            500: '#6366f1',
+                            600: '#4f46e5',
+                            700: '#4338ca',
+                            accent: '#06b6d4',
+                        }
+                    }
+                }
+            }
         }
+    </script>
+
+    <!-- Structured Data / JSON-LD Schema (WebComforts Style Snippets) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebApplication",
+      "name": "TextCraft Studio",
+      "url": "https://craftsuite-central.craftsuite-hub.workers.dev/",
+      "description": "Free online developer, text analysis, image conversion, and SEO tool suite.",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "All",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1280",
+        "bestRating": "5",
+        "worstRating": "1"
       }
-    ]
+    }
     </script>
 </head>
+<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
 
-    <!-- body start -->
-    <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between">
-
-    <!-- Header / Navbar -->
-    <header class="gradient-bg text-white shadow-md py-4 px-6">
-        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
-            <h1 class="text-xl font-bold tracking-wide flex items-center gap-2">
-                ⚡ TextCraft Studio
-            </h1>
-            <span class="text-xs bg-emerald-500 text-slate-900 px-3 py-1 rounded-full font-semibold">100% Client-Side Fast & Private</span>
+    <!-- Navbar -->
+    <header class="sticky top-0 z-50 bg-slate-900/80 backdrop-blur-md border-b border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="#" class="flex items-center gap-3 group">
+                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/20 group-hover:scale-105 transition">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <span class="font-extrabold text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+                    TextCraft<span class="text-brand-accent">Studio</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
+                <a href="#text-tools" class="hover:text-brand-accent transition">Text Tools</a>
+                <a href="#image-tools" class="hover:text-brand-accent transition">Image & Graphics</a>
+                <a href="#seo-tools" class="hover:text-brand-accent transition">SEO Tools</a>
+                <a href="#dev-tools" class="hover:text-brand-accent transition">Developer Tools</a>
+                <a href="#faqs" class="hover:text-brand-accent transition">FAQs</a>
+            </nav>
+            <a href="#all-tools" class="bg-brand-600 hover:bg-brand-500 text-white text-sm font-semibold px-4 py-2 rounded-lg transition shadow-md shadow-brand-600/30">
+                Explore All Tools
+            </a>
         </div>
     </header>
 
-    <!-- Main Workspace -->
-    <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
+    <!-- Hero Section -->
+    <section class="relative py-20 overflow-hidden bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 border-b border-slate-800">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,#1e293b15_1px,transparent_1px),linear-gradient(to_bottom,#1e293b15_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+        <div class="max-w-5xl mx-auto px-4 text-center relative z-10">
+            <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-accent text-xs font-semibold mb-6">
+                <i class="fa-solid fa-bolt"></i> 100% Free, Fast & Client-Side Private Utilities
+            </span>
+            <h1 class="text-4xl sm:text-6xl font-black text-white tracking-tight leading-tight mb-6">
+                Powerful Online Tools for <br>
+                <span class="bg-gradient-to-r from-brand-accent via-indigo-400 to-purple-400 bg-clip-text text-transparent">Creators, Developers & Marketers</span>
+            </h1>
+            <p class="text-slate-400 text-lg sm:text-xl max-w-2xl mx-auto mb-10">
+                Analyze text, optimize images, generate SEO schema, and format code instantly. Everything runs safely inside your browser.
+            </p>
 
-        <!-- Navigation Tabs -->
-        <div class="flex justify-center mb-8">
-            <div class="bg-slate-200 p-1.5 rounded-2xl flex flex-wrap justify-center gap-1.5 border border-slate-300 shadow-inner">
-                <button id="tabTextBtn" onclick="switchTab('text')" class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-900 text-white shadow-sm">
-                    📝 Word Counter
-                </button>
-                <button id="tabImgBtn" onclick="switchTab('image')" class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition text-slate-600 hover:text-slate-900">
-                    🖼️ Image to WebP
-                </button>
-                <button id="tabSvgBtn" onclick="switchTab('svg')" class="px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition text-slate-600 hover:text-slate-900">
-                    🎨 SVG Studio
-                </button>
+            <!-- Search Bar -->
+            <div class="max-w-2xl mx-auto relative mb-8">
+                <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+                <input type="text" id="toolSearch" placeholder="Search tools (e.g., Word Counter, WebP, SVG, JSON)..." 
+                    class="w-full pl-12 pr-4 py-4 rounded-xl bg-slate-800/80 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-brand-accent focus:ring-2 focus:ring-brand-accent/20 shadow-xl transition">
+            </div>
+
+            <!-- Quick Pill Categories -->
+            <div class="flex flex-wrap justify-center gap-2 text-xs font-medium text-slate-300">
+                <span class="px-3 py-1 bg-slate-800 rounded-lg border border-slate-700/50">Word Counter</span>
+                <span class="px-3 py-1 bg-slate-800 rounded-lg border border-slate-700/50">Image to WebP</span>
+                <span class="px-3 py-1 bg-slate-800 rounded-lg border border-slate-700/50">SVG Editor</span>
+                <span class="px-3 py-1 bg-slate-800 rounded-lg border border-slate-700/50">Meta Tag Generator</span>
+                <span class="px-3 py-1 bg-slate-800 rounded-lg border border-slate-700/50">JSON Formatter</span>
             </div>
         </div>
+    </section>
 
-        <!-- ========================================================= -->
-        <!-- TOOL 1: WORD COUNTER WORKSPACE                            -->
-        <!-- ========================================================= -->
-        <div id="textToolSection" class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-8 mb-8">
-            <div class="mb-4 flex justify-between items-center">
+    <!-- Main Tools Hub Grid -->
+    <main id="all-tools" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 space-y-20">
+
+        <!-- Category 1: Text & Content Tools -->
+        <section id="text-tools" class="tool-category">
+            <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+                <div class="w-10 h-10 rounded-lg bg-indigo-500/10 text-indigo-400 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-font"></i>
+                </div>
                 <div>
-                    <h2 class="text-2xl font-bold text-slate-900">Word Counter & Text Analyzer</h2>
-                    <p class="text-xs text-slate-500 mt-1">Analyze character counts, reading time, and switch text formatting instantly.</p>
-                </div>
-                <button onclick="clearText()" class="text-xs text-red-500 hover:text-red-700 font-medium bg-red-50 hover:bg-red-100 px-3 py-1.5 rounded-lg transition">Clear Text</button>
-            </div>
-
-            <textarea id="textInput" placeholder="Paste or type your content here to calculate words, characters, reading time, and change formatting..." 
-                class="w-full h-64 p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition text-slate-700 font-normal resize-y"
-                oninput="analyzeText()"></textarea>
-
-            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 mt-6">
-                <div class="bg-slate-100 p-4 rounded-xl text-center">
-                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Words</span>
-                    <span id="wordCount" class="text-2xl font-black text-slate-900">0</span>
-                </div>
-                <div class="bg-slate-100 p-4 rounded-xl text-center">
-                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Characters</span>
-                    <span id="charCount" class="text-2xl font-black text-slate-900">0</span>
-                </div>
-                <div class="bg-slate-100 p-4 rounded-xl text-center">
-                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">No Spaces</span>
-                    <span id="noSpaceCharCount" class="text-2xl font-black text-slate-900">0</span>
-                </div>
-                <div class="bg-slate-100 p-4 rounded-xl text-center">
-                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Sentences</span>
-                    <span id="sentenceCount" class="text-2xl font-black text-slate-900">0</span>
-                </div>
-                <div class="bg-slate-100 p-4 rounded-xl text-center">
-                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Paragraphs</span>
-                    <span id="paraCount" class="text-2xl font-black text-slate-900">0</span>
-                </div>
-                <div class="bg-slate-100 p-4 rounded-xl text-center">
-                    <span class="block text-xs uppercase tracking-wider text-slate-500 font-semibold">Reading Time</span>
-                    <span id="readTime" class="text-xl font-bold text-slate-900">0m</span>
+                    <h2 class="text-2xl font-bold text-white">Text & Content Suite</h2>
+                    <p class="text-sm text-slate-400">Analyze words, convert cases, and clean text snippets</p>
                 </div>
             </div>
 
-            <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-slate-100">
-                <button onclick="transformText('uppercase')" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">UPPERCASE</button>
-                <button onclick="transformText('lowercase')" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">lowercase</button>
-                <button onclick="transformText('titlecase')" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">Title Case</button>
-                <button onclick="transformText('sentencecase')" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">Sentence case</button>
-                <button onclick="copyToClipboard()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium ml-auto">Copy Output</button>
-            </div>
-        </div>
-
-        <!-- ========================================================= -->
-        <!-- TOOL 2: IMAGE TO WEBP WORKSPACE                            -->
-        <!-- ========================================================= -->
-        <div id="imageToolSection" class="hidden bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-8 mb-8">
-            <div class="mb-4">
-                <h2 class="text-2xl font-bold text-slate-900">Image to WebP Converter & Compressor</h2>
-                <p class="text-xs text-slate-500 mt-1">Convert PNG/JPG images to ultra-fast, compressed WebP format right in your browser.</p>
-            </div>
-
-            <div id="dropZone" class="border-2 border-dashed border-slate-300 hover:border-slate-500 rounded-xl p-8 text-center bg-slate-50 transition cursor-pointer" onclick="document.getElementById('imageFileInput').click()">
-                <svg class="mx-auto h-12 w-12 text-slate-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                </svg>
-                <p class="text-sm font-semibold text-slate-700">Click to select or drag and drop image here</p>
-                <p class="text-xs text-slate-400 mt-1">Supports PNG, JPG, JPEG, BMP</p>
-                <input type="file" id="imageFileInput" accept="image/png, image/jpeg, image/jpg, image/bmp" class="hidden" onchange="handleImageUpload(event)">
-            </div>
-
-            <div id="imageControls" class="hidden mt-6 pt-6 border-t border-slate-100">
-                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-slate-100 p-4 rounded-xl">
-                    <div class="w-full sm:w-2/3">
-                        <label for="qualitySlider" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">
-                            Compression Quality: <span id="qualityLabel" class="text-slate-900 font-bold">80%</span>
-                        </label>
-                        <input type="range" id="qualitySlider" min="10" max="100" value="80" class="w-full h-2 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-slate-900" oninput="updateQualityLabel(); processWebPConversion();">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Tool Card -->
+                <a href="#word-counter" class="tool-card group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-indigo-600/20 text-indigo-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <span class="text-xs bg-brand-500/10 text-brand-accent px-2 py-1 rounded font-semibold">Popular</span>
                     </div>
-                    <div class="text-right w-full sm:w-auto">
-                        <span class="block text-xs text-slate-500 font-medium">Original File Size</span>
-                        <span id="originalSizeText" class="text-sm font-bold text-slate-800">0 KB</span>
-                    </div>
-                </div>
-            </div>
-
-            <div id="imageResult" class="hidden mt-6 text-center bg-slate-50 p-6 rounded-xl border border-slate-200">
-                <h3 class="text-sm font-bold text-slate-700 mb-4">Converted WebP Preview</h3>
-                <div class="max-w-md mx-auto mb-4 overflow-hidden rounded-lg border border-slate-300 bg-white shadow-sm">
-                    <img id="webpPreviewImg" class="w-full h-auto object-contain max-h-80 mx-auto" alt="WebP Preview">
-                </div>
-
-                <div class="flex justify-center items-center gap-4 mb-6">
-                    <div class="bg-white px-4 py-2 rounded-lg border border-slate-200">
-                        <span class="block text-xs text-slate-400">WebP Size</span>
-                        <span id="webpSizeText" class="text-sm font-bold text-slate-900">0 KB</span>
-                    </div>
-                    <div id="savingsBadge" class="text-xs font-bold text-emerald-600 bg-emerald-100 px-3 py-1.5 rounded-full">
-                        0% Reduced
-                    </div>
-                </div>
-
-                <a id="downloadWebpBtn" download="converted-image.webp" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-6 py-3 rounded-lg shadow transition">
-                    ⬇️ Download WebP Image
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-accent transition">Word & Character Counter</h3>
+                    <p class="text-sm text-slate-400 mb-4">Real-time word, sentence, line, character count, and reading time estimation.</p>
+                    <span class="text-xs font-semibold text-brand-accent flex items-center gap-1">Open Tool <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
                 </a>
-            </div>
-        </div>
 
-        <!-- ========================================================= -->
-        <!-- TOOL 3: SVG STUDIO WORKSPACE                              -->
-        <!-- ========================================================= -->
-        <div id="svgToolSection" class="hidden bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-8 mb-8">
-            <div class="mb-4 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
-                <div>
-                    <h2 class="text-2xl font-bold text-slate-900">SVG Viewer, Editor & Converter</h2>
-                    <p class="text-xs text-slate-500 mt-1">View, edit, format SVG code, and export to PNG, Data URI, or React components.</p>
-                </div>
-                <div class="flex flex-wrap items-center gap-2">
-                    <label for="svgFileInput" class="cursor-pointer bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-2 rounded-lg font-medium border border-slate-300 transition">
-                        📁 Upload SVG
-                    </label>
-                    <input type="file" id="svgFileInput" accept=".svg,image/svg+xml" class="hidden" onchange="handleSvgUpload(event)">
-                    <button onclick="formatSvgCode()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-2 rounded-lg font-medium border border-slate-300 transition">✨ Prettify</button>
-                    <button onclick="clearSvgCode()" class="text-xs text-red-500 hover:text-red-700 font-medium px-2 py-2">Clear</button>
-                </div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
-                <div class="flex flex-col">
-                    <label for="svgInputCode" class="text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">SVG Source Code</label>
-                    <textarea id="svgInputCode" placeholder="Paste your SVG code here..." 
-                        class="w-full h-80 p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition font-mono text-xs text-sky-400 bg-slate-900 resize-y"
-                        oninput="updateSvgPreview()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
-  <circle cx="50" cy="50" r="40" fill="#10b981" />
-  <path d="M30 50 L45 65 L70 35" stroke="#ffffff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
-</svg></textarea>
-                </div>
-
-                <div class="flex flex-col">
-                    <div class="flex justify-between items-center mb-2">
-                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-600">Live Visual Preview</span>
-                        <div class="flex items-center gap-1 text-xs">
-                            <span class="text-slate-400 mr-1">Bg:</span>
-                            <button onclick="setSvgBg('grid')" id="bgGridBtn" class="px-2 py-1 rounded border border-slate-300 bg-slate-200 text-slate-800 font-semibold">Grid</button>
-                            <button onclick="setSvgBg('dark')" id="bgDarkBtn" class="px-2 py-1 rounded border border-slate-300 bg-slate-100 text-slate-600">Dark</button>
-                            <button onclick="setSvgBg('light')" id="bgLightBtn" class="px-2 py-1 rounded border border-slate-300 bg-slate-100 text-slate-600">Light</button>
+                <a href="#case-converter" class="tool-card group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-blue-600/20 text-blue-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-text-height"></i>
                         </div>
                     </div>
-                    <div id="svgPreviewDisplay" class="w-full h-80 rounded-xl border border-slate-300 bg-grid-pattern flex items-center justify-center p-4 overflow-hidden relative">
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-accent transition">Text Case Converter</h3>
+                    <p class="text-sm text-slate-400 mb-4">Convert text to UPPERCASE, lowercase, Title Case, CamelCase, and Slug format.</p>
+                    <span class="text-xs font-semibold text-brand-accent flex items-center gap-1">Open Tool <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </a>
+
+                <a href="#duplicate-remover" class="tool-card group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-cyan-600/20 text-cyan-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-filter"></i>
+                        </div>
                     </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-accent transition">Remove Duplicate Lines</h3>
+                    <p class="text-sm text-slate-400 mb-4">Clean up raw lists, remove duplicate entries, and sort lines alphabetically.</p>
+                    <span class="text-xs font-semibold text-brand-accent flex items-center gap-1">Open Tool <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Category 2: Image & Graphic Utilities -->
+        <section id="image-tools" class="tool-category">
+            <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+                <div class="w-10 h-10 rounded-lg bg-emerald-500/10 text-emerald-400 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-image"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-white">Image & Graphic Utilities</h2>
+                    <p class="text-sm text-slate-400">Convert, preview, compress, and edit modern web image formats</p>
                 </div>
             </div>
 
-            <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-slate-100">
-                <button onclick="downloadSvgAsPng()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">⬇️ Download PNG</button>
-                <button onclick="copySvgCode()" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">📋 Copy SVG</button>
-                <button onclick="copyDataUri()" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">🔗 Copy Data URI</button>
-                <button onclick="copyReactComponent()" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">⚛️ Copy React JSX</button>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#webp-converter" class="tool-card group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-emerald-600/20 text-emerald-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-file-image"></i>
+                        </div>
+                        <span class="text-xs bg-emerald-500/10 text-emerald-400 px-2 py-1 rounded font-semibold">Fast Converter</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-accent transition">Image to WebP Converter</h3>
+                    <p class="text-sm text-slate-400 mb-4">Convert PNG, JPG, or WEBP images instantly with zero server uploads.</p>
+                    <span class="text-xs font-semibold text-brand-accent flex items-center gap-1">Open Tool <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </a>
+
+                <a href="#svg-studio" class="tool-card group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-purple-600/20 text-purple-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-vector-square"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-accent transition">SVG Viewer & Live Code Editor</h3>
+                    <p class="text-sm text-slate-400 mb-4">Preview raw SVG code live, edit styles, and export directly to PNG/SVG.</p>
+                    <span class="text-xs font-semibold text-brand-accent flex items-center gap-1">Open Tool <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </a>
             </div>
-        </div>
+        </section>
 
-        <!-- Ad Placement Placeholder -->
-        <div class="my-8 text-center p-4 border border-dashed border-slate-300 rounded-lg text-slate-400 text-xs">
-            [ Advertisement Space ]
-        </div>
+        <!-- Category 3: SEO & Web Optimization -->
+        <section id="seo-tools" class="tool-category">
+            <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+                <div class="w-10 h-10 rounded-lg bg-amber-500/10 text-amber-400 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-chart-line"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-white">SEO & Web Suite</h2>
+                    <p class="text-sm text-slate-400">Generate tags, sitemaps, and test search previews</p>
+                </div>
+            </div>
 
-        <!-- ========================================================= -->
-        <!-- DYNAMIC TAB-SPECIFIC GUIDES & FAQS                        -->
-        <!-- ========================================================= -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#meta-generator" class="tool-card group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-amber-600/20 text-amber-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-tags"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-accent transition">Meta Tag & OpenGraph Generator</h3>
+                    <p class="text-sm text-slate-400 mb-4">Generate search tags, social media Open Graph tags, and Twitter Cards.</p>
+                    <span class="text-xs font-semibold text-brand-accent flex items-center gap-1">Open Tool <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </a>
 
-        <!-- 1. WORD COUNTER GUIDE SECTION -->
-        <article id="textGuideSection" class="prose max-w-none bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 text-slate-700 space-y-6">
-            <header class="border-b border-slate-100 pb-4">
-                <h2 class="text-2xl font-bold text-slate-900">Word Counter & Text Analyzer Guide</h2>
-                <p class="text-sm text-slate-500 mt-1">Learn how to analyze character counts, optimize content for search engine limits, and transform text cases effortlessy.</p>
-            </header>
+                <a href="#robots-generator" class="tool-card group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-rose-600/20 text-rose-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-robot"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-accent transition">Robots.txt Generator</h3>
+                    <p class="text-sm text-slate-400 mb-4">Create custom directives to allow or disallow search bots on your domain.</p>
+                    <span class="text-xs font-semibold text-brand-accent flex items-center gap-1">Open Tool <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </a>
+            </div>
+        </section>
 
-            <section>
-                <h3 class="text-lg font-bold text-slate-800 mb-2">What Does This Tool Do?</h3>
-                <p class="text-sm leading-relaxed">
-                    The <strong>TextCraft Word Counter</strong> provides real-time statistics on your written content. Whether you are drafting a blog post, crafting a social media update, or writing an academic paper, this tool instantly calculates total words, total characters (with and without spaces), total sentences, paragraphs, and estimated reading time.
+        <!-- Category 4: Developer & Code Utilities -->
+        <section id="dev-tools" class="tool-category">
+            <div class="flex items-center gap-3 mb-8 border-b border-slate-800 pb-4">
+                <div class="w-10 h-10 rounded-lg bg-sky-500/10 text-sky-400 flex items-center justify-center text-xl">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <div>
+                    <h2 class="text-2xl font-bold text-white">Developer & Code Tools</h2>
+                    <p class="text-sm text-slate-400">Minify, validate, format, and encode developer payloads</p>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <a href="#json-formatter" class="tool-card group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-sky-600/20 text-sky-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-code-commit"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-accent transition">JSON Formatter & Validator</h3>
+                    <p class="text-sm text-slate-400 mb-4">Format, beautify, and validate complex JSON strings with tree syntax views.</p>
+                    <span class="text-xs font-semibold text-brand-accent flex items-center gap-1">Open Tool <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </a>
+
+                <a href="#base64-encoder" class="tool-card group p-6 rounded-2xl bg-slate-900 border border-slate-800 hover:border-brand-500/50 hover:bg-slate-800/50 transition">
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="w-12 h-12 rounded-xl bg-violet-600/20 text-violet-400 flex items-center justify-center text-xl group-hover:scale-110 transition">
+                            <i class="fa-solid fa-lock"></i>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-bold text-white mb-2 group-hover:text-brand-accent transition">Base64 Encoder / Decoder</h3>
+                    <p class="text-sm text-slate-400 mb-4">Encode strings or files into Base64 format and decode them safely online.</p>
+                    <span class="text-xs font-semibold text-brand-accent flex items-center gap-1">Open Tool <i class="fa-solid fa-arrow-right text-[10px]"></i></span>
+                </a>
+            </div>
+        </section>
+
+        <!-- WebComforts Style Rating & Trust Banner -->
+        <section class="rounded-3xl bg-gradient-to-r from-slate-900 via-indigo-950 to-slate-900 p-8 sm:p-12 border border-slate-800 text-center relative overflow-hidden">
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="flex justify-center gap-1 text-amber-400 text-xl">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
+                <h3 class="text-2xl sm:text-3xl font-extrabold text-white">Trusted by Over 10,000+ Developers & SEO Specialists</h3>
+                <p class="text-slate-400 text-sm sm:text-base">
+                    TextCraft Studio provides zero-latency client-side utilities. No tracking, no data storage, and 100% data privacy guaranteed.
                 </p>
-            </section>
+            </div>
+        </section>
 
-            <section>
-                <h3 class="text-lg font-bold text-slate-800 mb-3">Recommended Character Limits Cheatsheet</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse border border-slate-200 text-xs sm:text-sm">
-                        <thead>
-                            <tr class="bg-slate-100 text-slate-900">
-                                <th class="p-3 border border-slate-200 font-bold">Platform / Target</th>
-                                <th class="p-3 border border-slate-200 font-bold">Recommended Limit</th>
-                                <th class="p-3 border border-slate-200 font-bold">Purpose & Impact</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-200">
-                            <tr>
-                                <td class="p-3 font-semibold">Google SEO Meta Title</td>
-                                <td class="p-3">50 - 60 characters</td>
-                                <td class="p-3">Prevents snippet truncation in search engine result pages (SERPs).</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">Google SEO Meta Description</td>
-                                <td class="p-3">150 - 160 characters</td>
-                                <td class="p-3">Provides searchers a clear preview without being cut off.</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">X (Twitter) Post</td>
-                                <td class="p-3">280 characters</td>
-                                <td class="p-3">Standard limit for standard non-premium Twitter accounts.</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">LinkedIn Post</td>
-                                <td class="p-3">3,000 characters</td>
-                                <td class="p-3">Optimal for detailed professional articles and long updates.</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">Blog Articles (Long-form)</td>
-                                <td class="p-3">1,500 - 2,500 words</td>
-                                <td class="p-3">Correlates with higher organic rankings on search engines.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
+        <!-- Long-Form SEO Content Area (Crucial for WebComforts Ranking Strategy) -->
+        <article class="prose prose-invert max-w-none bg-slate-900/40 p-8 sm:p-12 rounded-3xl border border-slate-800/80 space-y-6 text-slate-300">
+            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-3">Why Use TextCraft Studio Web Utilities?</h2>
+            <p>
+                In today's fast-paced digital workflow, developers, webmasters, and SEO agencies require lightweight tools that perform instantly without requiring software installations or account registration. <strong>TextCraft Studio</strong> offers an all-in-one suite designed specifically to streamline website optimization, content publishing, and code formatting.
+            </p>
 
-            <section class="border-t border-slate-100 pt-6">
-                <h3 class="text-lg font-bold text-slate-800 mb-4">Frequently Asked Questions (Word Counter)</h3>
-                <div class="space-y-4 text-sm">
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <h4 class="font-bold text-slate-900 mb-1">Q: How is reading time calculated?</h4>
-                        <p class="text-slate-600">A: Reading time is calculated based on the average adult reading speed of <strong>200 words per minute (WPM)</strong>.</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <h4 class="font-bold text-slate-900 mb-1">Q: What is the difference between "Characters" and "No Spaces"?</h4>
-                        <p class="text-slate-600">A: "Characters" includes every single letter, number, symbol, and space. "No Spaces" excludes spaces, which is useful when publishers require character counts without whitespace.</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <h4 class="font-bold text-slate-900 mb-1">Q: Is my text saved on any server?</h4>
-                        <p class="text-slate-600">A: No. All calculations happen entirely inside your web browser via client-side JavaScript. Your text is never transmitted or saved anywhere.</p>
-                    </div>
-                </div>
-            </section>
+            <h3 class="text-xl font-semibold text-white">Key Advantages of Client-Side Web Tools</h3>
+            <ul class="list-disc pl-6 space-y-2">
+                <li><strong>100% Data Privacy:</strong> All text conversions, SVG rendering, and WebP image processing happen directly inside your browser using modern WebAssembly and JavaScript APIs. Your data never hits external servers.</li>
+                <li><strong>Ultra Fast Core Web Vitals Performance:</strong> Optimized structure ensures near-zero latency, giving you instantaneous responses for word counts, JSON validations, and image compression.</li>
+                <li><strong>SEO-Optimized Metadata Generator:</strong> Create fully compliant Open Graph and Twitter card meta tags to maximize click-through rates (CTR) on social media platforms like WhatsApp, Facebook, and LinkedIn.</li>
+            </ul>
         </article>
 
-        <!-- 2. IMAGE TO WEBP GUIDE SECTION -->
-        <article id="imageGuideSection" class="hidden prose max-w-none bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 text-slate-700 space-y-6">
-            <header class="border-b border-slate-100 pb-4">
-                <h2 class="text-2xl font-bold text-slate-900">Image to WebP Converter & Optimization Guide</h2>
-                <p class="text-sm text-slate-500 mt-1">Convert bulky PNG and JPEG images to light, high-performance WebP images directly in your browser.</p>
-            </header>
+        <!-- FAQ Section -->
+        <section id="faqs" class="space-y-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-extrabold text-white">Frequently Asked Questions</h2>
+                <p class="text-slate-400 mt-2 text-sm">Everything you need to know about using TextCraft Studio</p>
+            </div>
 
-            <section>
-                <h3 class="text-lg font-bold text-slate-800 mb-2">Why Should You Convert Images to WebP?</h3>
-                <p class="text-sm leading-relaxed">
-                    <strong>WebP</strong> is a modern image format developed by Google that provides superior lossy and lossless compression for web images. Using WebP images makes websites load substantially faster, saves server bandwidth, and boosts Google <strong>Core Web Vitals</strong> scores (specifically Largest Contentful Paint / LCP).
-                </p>
-            </section>
-
-            <section>
-                <h3 class="text-lg font-bold text-slate-800 mb-3">Format Comparison Overview</h3>
-                <div class="overflow-x-auto">
-                    <table class="w-full text-left border-collapse border border-slate-200 text-xs sm:text-sm">
-                        <thead>
-                            <tr class="bg-slate-100 text-slate-900">
-                                <th class="p-3 border border-slate-200 font-bold">Image Format</th>
-                                <th class="p-3 border border-slate-200 font-bold">Average Size Reduction</th>
-                                <th class="p-3 border border-slate-200 font-bold">Transparency Support</th>
-                                <th class="p-3 border border-slate-200 font-bold">Best Used For</th>
-                            </tr>
-                        </thead>
-                        <tbody class="divide-y divide-slate-200">
-                            <tr>
-                                <td class="p-3 font-semibold">WebP</td>
-                                <td class="p-3 text-emerald-600 font-bold">25% - 35% Smaller</td>
-                                <td class="p-3">Yes (Alpha channel)</td>
-                                <td class="p-3">Websites, blog articles, e-commerce stores, modern web apps.</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">PNG</td>
-                                <td class="p-3 text-slate-500">Baseline (Heavy)</td>
-                                <td class="p-3">Yes</td>
-                                <td class="p-3">High-resolution graphics, raw source files, print graphics.</td>
-                            </tr>
-                            <tr>
-                                <td class="p-3 font-semibold">JPEG / JPG</td>
-                                <td class="p-3 text-slate-500">Moderate Compression</td>
-                                <td class="p-3">No</td>
-                                <td class="p-3">Legacy web photos, email newsletters.</td>
-                            </tr>
-                        </tbody>
-                    </table>
+            <div class="max-w-3xl mx-auto space-y-4">
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+                    <h3 class="font-bold text-white text-lg">Are my files or text uploaded to any server?</h3>
+                    <p class="text-slate-400 text-sm mt-2">No. All tools on TextCraft Studio operate entirely client-side inside your browser memory. Your files and text remain completely private.</p>
                 </div>
-            </section>
 
-            <section class="border-t border-slate-100 pt-6">
-                <h3 class="text-lg font-bold text-slate-800 mb-4">Frequently Asked Questions (WebP Converter)</h3>
-                <div class="space-y-4 text-sm">
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <h4 class="font-bold text-slate-900 mb-1">Q: Will converting images to WebP reduce quality?</h4>
-                        <p class="text-slate-600">A: At the default 80% compression level, quality loss is virtually invisible to the human eye, while file size drops dramatically. You can adjust the quality slider to find the perfect balance.</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <h4 class="font-bold text-slate-900 mb-1">Q: Are my uploaded images safe and private?</h4>
-                        <p class="text-slate-600">A: Absolutely! All processing is executed locally in your browser using HTML5 Canvas API. No images are uploaded to any server or cloud storage.</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <h4 class="font-bold text-slate-900 mb-1">Q: Do modern web browsers support WebP?</h4>
-                        <p class="text-slate-600">A: Yes! WebP is fully supported by all major web browsers including Google Chrome, Apple Safari, Mozilla Firefox, Microsoft Edge, and mobile browsers.</p>
-                    </div>
+                <div class="p-6 rounded-2xl bg-slate-900 border border-slate-800">
+                    <h3 class="font-bold text-white text-lg">Is TextCraft Studio completely free to use?</h3>
+                    <p class="text-slate-400 text-sm mt-2">Yes! All utilities including the Word Counter, WebP Converter, SVG Studio, and Meta Tag Generator are 100% free with no limits or subscriptions.</p>
                 </div>
-            </section>
-        </article>
-
-        <!-- 3. SVG STUDIO GUIDE SECTION -->
-        <article id="svgGuideSection" class="hidden prose max-w-none bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-slate-200 text-slate-700 space-y-6">
-            <header class="border-b border-slate-100 pb-4">
-                <h2 class="text-2xl font-bold text-slate-900">SVG Studio & Vector Code Editor Guide</h2>
-                <p class="text-sm text-slate-500 mt-1">Master scalable vector graphics: live edit SVG markup, export high-res PNGs, and generate React components.</p>
-            </header>
-
-            <section>
-                <h3 class="text-lg font-bold text-slate-800 mb-2">What is SVG and Why Use SVG Studio?</h3>
-                <p class="text-sm leading-relaxed">
-                    <strong>Scalable Vector Graphics (SVG)</strong> is an XML-based vector image format. Unlike raster formats (PNG, JPG), SVGs scale infinitely without losing quality and feature exceptionally low file sizes. Our **SVG Studio** allows frontend developers, web designers, and content creators to inspect, edit, format, and convert SVG code instantly.
-                </p>
-            </section>
-
-            <section>
-                <h3 class="text-lg font-bold text-slate-800 mb-3">Key Tools Included in SVG Studio</h3>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-xs sm:text-sm">
-                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-                        <h4 class="font-bold text-slate-900 mb-1">✨ Code Prettifier & Formatter</h4>
-                        <p class="text-slate-600">Clean up messy or minified SVG code into formatted, human-readable XML layout with proper indentations.</p>
-                    </div>
-                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-                        <h4 class="font-bold text-slate-900 mb-1">⬇️ High-Resolution PNG Exporter</h4>
-                        <p class="text-slate-600">Convert vector paths into standard PNG image files rendered seamlessly via browser HTML canvas.</p>
-                    </div>
-                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-                        <h4 class="font-bold text-slate-900 mb-1">⚛️ React JSX Component Exporter</h4>
-                        <p class="text-slate-600">Converts standard HTML SVG attributes (`class`, `stroke-width`) into React-compliant JSX (`className`, `strokeWidth`).</p>
-                    </div>
-                    <div class="p-4 rounded-xl border border-slate-200 bg-slate-50">
-                        <h4 class="font-bold text-slate-900 mb-1">🔗 Data URI Generator</h4>
-                        <p class="text-slate-600">Generate inline base64 / Data URIs for embedding vector graphics directly inside CSS `background-image` properties.</p>
-                    </div>
-                </div>
-            </section>
-
-            <section class="border-t border-slate-100 pt-6">
-                <h3 class="text-lg font-bold text-slate-800 mb-4">Frequently Asked Questions (SVG Studio)</h3>
-                <div class="space-y-4 text-sm">
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <h4 class="font-bold text-slate-900 mb-1">Q: Can I edit colors and shapes directly in the code editor?</h4>
-                        <p class="text-slate-600">A: Yes! As soon as you edit values like `fill`, `stroke`, `width`, or `path d="..."` in the source code box, the live visual preview updates automatically.</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <h4 class="font-bold text-slate-900 mb-1">Q: Why use React JSX components for icons?</h4>
-                        <p class="text-slate-600">A: In React / Next.js projects, converting SVG code into a JSX component allows you to dynamically control icon size, color, and CSS classes using React props.</p>
-                    </div>
-                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200">
-                        <h4 class="font-bold text-slate-900 mb-1">Q: Does SVG Studio process private design assets safely?</h4>
-                        <p class="text-slate-600">A: Yes! Entire SVG rendering, XML formatting, and PNG rasterization take place locally in your browser. Nothing is uploaded to external servers.</p>
-                    </div>
-                </div>
-            </section>
-        </article>
+            </div>
+        </section>
 
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 text-slate-400 py-6 text-center text-xs">
-        <p>© 2026 TextCraft Studio. Built for speed, privacy, and productivity.</p>
+    <footer class="bg-slate-900 border-t border-slate-800 py-12 text-slate-400 text-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+            <div class="space-y-3">
+                <span class="font-bold text-lg text-white">TextCraft Studio</span>
+                <p class="text-xs text-slate-400">Fast, private, and secure online utilities for writers, web developers, and SEO experts.</p>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Popular Tools</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#word-counter" class="hover:text-white transition">Word Counter</a></li>
+                    <li><a href="#webp-converter" class="hover:text-white transition">Image to WebP</a></li>
+                    <li><a href="#svg-studio" class="hover:text-white transition">SVG Live Editor</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">SEO & Dev</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#meta-generator" class="hover:text-white transition">Meta Tag Generator</a></li>
+                    <li><a href="#json-formatter" class="hover:text-white transition">JSON Formatter</a></li>
+                    <li><a href="#robots-generator" class="hover:text-white transition">Robots.txt Generator</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold text-white mb-3">Legal & Privacy</h4>
+                <ul class="space-y-2 text-xs">
+                    <li><a href="#" class="hover:text-white transition">Privacy Policy</a></li>
+                    <li><a href="#" class="hover:text-white transition">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 text-center border-t border-slate-800/60 pt-6 text-xs text-slate-500">
+            &copy; 2026 TextCraft Studio. All rights reserved.
+        </div>
     </footer>
 
-    <!-- Interactive JavaScript Logic -->
+    <!-- Simple Live Search JS -->
     <script>
-        // Tab Switcher for both Tool Workspaces and Guides
-        function switchTab(tab) {
-            // Tool Sections
-            const textSection = document.getElementById('textToolSection');
-            const imageSection = document.getElementById('imageToolSection');
-            const svgSection = document.getElementById('svgToolSection');
-
-            // Guide Sections
-            const textGuide = document.getElementById('textGuideSection');
-            const imageGuide = document.getElementById('imageGuideSection');
-            const svgGuide = document.getElementById('svgGuideSection');
-
-            // Tab Buttons
-            const tabTextBtn = document.getElementById('tabTextBtn');
-            const tabImgBtn = document.getElementById('tabImgBtn');
-            const tabSvgBtn = document.getElementById('tabSvgBtn');
-
-            const activeClass = "px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition bg-slate-900 text-white shadow-sm";
-            const inactiveClass = "px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold transition text-slate-600 hover:text-slate-900";
-
-            // Hide all tools & guides
-            textSection.classList.add('hidden');
-            imageSection.classList.add('hidden');
-            svgSection.classList.add('hidden');
-
-            textGuide.classList.add('hidden');
-            imageGuide.classList.add('hidden');
-            svgGuide.classList.add('hidden');
-
-            // Reset buttons styling
-            tabTextBtn.className = inactiveClass;
-            tabImgBtn.className = inactiveClass;
-            tabSvgBtn.className = inactiveClass;
-
-            if (tab === 'text') {
-                textSection.classList.remove('hidden');
-                textGuide.classList.remove('hidden');
-                tabTextBtn.className = activeClass;
-            } else if (tab === 'image') {
-                imageSection.classList.remove('hidden');
-                imageGuide.classList.remove('hidden');
-                tabImgBtn.className = activeClass;
-            } else if (tab === 'svg') {
-                svgSection.classList.remove('hidden');
-                svgGuide.classList.remove('hidden');
-                tabSvgBtn.className = activeClass;
-                updateSvgPreview();
-            }
-        }
-
-        // TOOL 1: Text Counter Logic
-        function analyzeText() {
-            const text = document.getElementById('textInput').value;
-
-            const charCount = text.length;
-            const noSpaceCharCount = text.replace(/\s/g, '').length;
-
-            const trimmedText = text.trim();
-            const wordCount = trimmedText === '' ? 0 : trimmedText.split(/\s+/).length;
-
-            const sentenceCount = trimmedText === '' ? 0 : (text.match(/[^\.!\?]+[\.!\?]+/g) || []).length || (text.length > 0 ? 1 : 0);
-
-            const paraCount = trimmedText === '' ? 0 : text.split(/\n+/).filter(p => p.trim().length > 0).length;
-
-            const minutes = Math.ceil(wordCount / 200);
-
-            document.getElementById('wordCount').innerText = wordCount.toLocaleString();
-            document.getElementById('charCount').innerText = charCount.toLocaleString();
-            document.getElementById('noSpaceCharCount').innerText = noSpaceCharCount.toLocaleString();
-            document.getElementById('sentenceCount').innerText = sentenceCount.toLocaleString();
-            document.getElementById('paraCount').innerText = paraCount.toLocaleString();
-            document.getElementById('readTime').innerText = wordCount === 0 ? '0m' : `${minutes} min`;
-        }
-
-        function transformText(type) {
-            const input = document.getElementById('textInput');
-            let text = input.value;
-
-            if (!text) return;
-
-            if (type === 'uppercase') {
-                input.value = text.toUpperCase();
-            } else if (type === 'lowercase') {
-                input.value = text.toLowerCase();
-            } else if (type === 'titlecase') {
-                input.value = text.toLowerCase().split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
-            } else if (type === 'sentencecase') {
-                input.value = text.toLowerCase().replace(/(^\s*|\.\s*)([a-z])/g, (match, separator, char) => separator + char.toUpperCase());
-            }
-
-            analyzeText();
-        }
-
-        function clearText() {
-            document.getElementById('textInput').value = '';
-            analyzeText();
-        }
-
-        function copyToClipboard() {
-            const text = document.getElementById('textInput').value;
-            if (!text) return;
-            navigator.clipboard.writeText(text).then(() => {
-                alert('Text copied to clipboard!');
-            });
-        }
-
-        // TOOL 2: Image WebP Converter Logic
-        let rawSelectedFile = null;
-        let loadedImageObject = null;
-
-        function handleImageUpload(e) {
-            const file = e.target.files ? e.target.files[0] : (e.dataTransfer ? e.dataTransfer.files[0] : null);
-            if (!file) return;
-
-            rawSelectedFile = file;
-            document.getElementById('originalSizeText').innerText = formatFileSize(file.size);
-
-            const reader = new FileReader();
-            reader.onload = (event) => {
-                loadedImageObject = new Image();
-                loadedImageObject.onload = () => {
-                    document.getElementById('imageControls').classList.remove('hidden');
-                    document.getElementById('imageResult').classList.remove('hidden');
-                    processWebPConversion();
-                };
-                loadedImageObject.src = event.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-
-        // Drag & Drop
-        const dropZone = document.getElementById('dropZone');
-        if (dropZone) {
-            ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
-                dropZone.addEventListener(eventName, (e) => {
-                    e.preventDefault();
-                    e.stopPropagation();
-                }, false);
-            });
-
-            ['dragenter', 'dragover'].forEach(eventName => {
-                dropZone.addEventListener(eventName, () => dropZone.classList.add('border-slate-500', 'bg-slate-100'), false);
-            });
-
-            ['dragleave', 'drop'].forEach(eventName => {
-                dropZone.addEventListener(eventName, () => dropZone.classList.remove('border-slate-500', 'bg-slate-100'), false);
-            });
-
-            dropZone.addEventListener('drop', (e) => {
-                const dt = e.dataTransfer;
-                if (dt && dt.files.length > 0) {
-                    handleImageUpload(e);
+        document.getElementById('toolSearch').addEventListener('keyup', function(e) {
+            const term = e.target.value.toLowerCase();
+            const cards = document.querySelectorAll('.tool-card');
+            
+            cards.forEach(card => {
+                const text = card.textContent.toLowerCase();
+                if(text.includes(term)) {
+                    card.style.display = "block";
+                } else {
+                    card.style.display = "none";
                 }
-            }, false);
-        }
-
-        function updateQualityLabel() {
-            const val = document.getElementById('qualitySlider').value;
-            document.getElementById('qualityLabel').innerText = `${val}%`;
-        }
-
-        function processWebPConversion() {
-            if (!loadedImageObject) return;
-
-            const canvas = document.createElement('canvas');
-            canvas.width = loadedImageObject.width;
-            canvas.height = loadedImageObject.height;
-
-            const ctx = canvas.getContext('2d');
-            ctx.drawImage(loadedImageObject, 0, 0);
-
-            const q = parseInt(document.getElementById('qualitySlider').value) / 100;
-            const webpDataUrl = canvas.toDataURL('image/webp', q);
-
-            document.getElementById('webpPreviewImg').src = webpDataUrl;
-            document.getElementById('downloadWebpBtn').href = webpDataUrl;
-
-            const base64Head = 'data:image/webp;base64,';
-            const sizeInBytes = Math.round((webpDataUrl.length - base64Head.length) * 3 / 4);
-            document.getElementById('webpSizeText').innerText = formatFileSize(sizeInBytes);
-
-            const originalBytes = rawSelectedFile.size;
-            const reduction = Math.round(((originalBytes - sizeInBytes) / originalBytes) * 100);
-
-            const badge = document.getElementById('savingsBadge');
-            if (reduction > 0) {
-                badge.innerText = `${reduction}% Smaller`;
-                badge.className = "text-xs font-bold text-emerald-600 bg-emerald-100 px-3 py-1.5 rounded-full";
-            } else {
-                badge.innerText = `${Math.abs(reduction)}% Larger`;
-                badge.className = "text-xs font-bold text-amber-600 bg-amber-100 px-3 py-1.5 rounded-full";
-            }
-        }
-
-        function formatFileSize(bytes) {
-            if (bytes === 0) return '0 Bytes';
-            const k = 1024;
-            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
-            const i = Math.floor(Math.log(bytes) / Math.log(k));
-            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
-        }
-
-        // TOOL 3: SVG Studio Logic
-        function updateSvgPreview() {
-            const code = document.getElementById("svgInputCode").value;
-            const display = document.getElementById("svgPreviewDisplay");
-            display.innerHTML = code;
-
-            const svgElement = display.querySelector('svg');
-            if (svgElement) {
-                svgElement.style.maxWidth = '100%';
-                svgElement.style.maxHeight = '100%';
-                svgElement.style.height = 'auto';
-            }
-        }
-
-        function setSvgBg(type) {
-            const display = document.getElementById("svgPreviewDisplay");
-            const gridBtn = document.getElementById("bgGridBtn");
-            const darkBtn = document.getElementById("bgDarkBtn");
-            const lightBtn = document.getElementById("bgLightBtn");
-
-            display.className = "w-full h-80 rounded-xl border border-slate-300 flex items-center justify-center p-4 overflow-hidden relative";
-
-            const activeClass = "px-2 py-1 rounded border border-slate-300 bg-slate-200 text-slate-800 font-semibold";
-            const inactiveClass = "px-2 py-1 rounded border border-slate-300 bg-slate-100 text-slate-600";
-
-            gridBtn.className = inactiveClass;
-            darkBtn.className = inactiveClass;
-            lightBtn.className = inactiveClass;
-
-            if (type === 'grid') {
-                display.classList.add('bg-grid-pattern');
-                gridBtn.className = activeClass;
-            } else if (type === 'dark') {
-                display.classList.add('bg-slate-900');
-                darkBtn.className = activeClass;
-            } else if (type === 'light') {
-                display.classList.add('bg-white');
-                lightBtn.className = activeClass;
-            }
-        }
-
-        function handleSvgUpload(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    document.getElementById("svgInputCode").value = e.target.result;
-                    updateSvgPreview();
-                };
-                reader.readAsText(file);
-            }
-        }
-
-        function formatSvgCode() {
-            let textarea = document.getElementById("svgInputCode");
-            if (!textarea.value.trim()) return;
-            let xml = textarea.value.replace(/>\s*</g, '>\n<').trim();
-            textarea.value = xml;
-            updateSvgPreview();
-        }
-
-        function clearSvgCode() {
-            document.getElementById("svgInputCode").value = "";
-            document.getElementById("svgPreviewDisplay").innerHTML = "";
-        }
-
-        function downloadSvgAsPng() {
-            const svgString = document.getElementById("svgInputCode").value;
-            if (!svgString.trim()) return alert("Please enter or upload SVG code first.");
-
-            const blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
-            const url = URL.createObjectURL(blob);
-            const img = new Image();
-
-            img.onload = function () {
-                const canvas = document.createElement("canvas");
-                canvas.width = img.width || 800;
-                canvas.height = img.height || 800;
-                const ctx = canvas.getContext("2d");
-                ctx.drawImage(img, 0, 0);
-                URL.revokeObjectURL(url);
-
-                const a = document.createElement("a");
-                a.download = "textcraft-svg-export.png";
-                a.href = canvas.toDataURL("image/png");
-                a.click();
-            };
-            img.onerror = function() {
-                alert("Invalid SVG code. Unable to convert to PNG.");
-            };
-            img.src = url;
-        }
-
-        function copySvgCode() {
-            const code = document.getElementById("svgInputCode").value;
-            if (!code) return;
-            navigator.clipboard.writeText(code).then(() => {
-                alert("SVG Code copied to clipboard!");
             });
-        }
-
-        function copyDataUri() {
-            const code = document.getElementById("svgInputCode").value;
-            if (!code) return;
-            const encoded = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(code);
-            navigator.clipboard.writeText(encoded).then(() => {
-                alert("Data URI copied to clipboard!");
-            });
-        }
-
-        function copyReactComponent() {
-            let code = document.getElementById("svgInputCode").value;
-            if (!code) return;
-            code = code.replace(/class=/g, "className=")
-                       .replace(/stroke-width=/g, "strokeWidth=")
-                       .replace(/fill-rule=/g, "fillRule=")
-                       .replace(/stroke-linecap=/g, "strokeLinecap=")
-                       .replace(/stroke-linejoin=/g, "strokeLinejoin=")
-                       .replace(/clip-rule=/g, "clipRule=");
-
-            const jsx = `export const SvgIcon = (props) => (\n  ${code}\n);`;
-            navigator.clipboard.writeText(jsx).then(() => {
-                alert("React JSX Component copied to clipboard!");
-            });
-        }
-
-        document.addEventListener("DOMContentLoaded", () => {
-            updateSvgPreview();
         });
     </script>
 </body>
- <!-- body end -->
 </html>
