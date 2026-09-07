@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Online Word Counter & Text Case Converter | SEO Utility Tool</title>
-    <meta name="description" content="Free real-time online word counter, character count tool, reading time estimator, and text case converter for writers, students, and SEO specialists.">
+    <title>Free Online Word Counter & Image WebP Converter | TextCraft Studio</title>
+    <meta name="description" content="Free online word counter, text case converter, and fast image to WebP converter. 100% private, browser-based utilities for writers, developers, and SEO experts.">
+    <meta name="keywords" content="word counter, text analyzer, image to webp, webp converter, character count, sentence counter, reading time">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://craftsuite-central.imrankazmi98.workers.dev/">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://craftsuite-central.imrankazmi98.workers.dev/">
+    <meta property="og:title" content="Free Online Word Counter & Image WebP Converter | TextCraft Studio">
+    <meta property="og:description" content="100% client-side text analysis and image optimization tools. Fast, secure, and free.">
+
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
@@ -12,40 +22,100 @@
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
         }
     </style>
+
     <!-- Schema Markup for AdSense & Google SEO -->
     <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "WebApplication",
-      "name": "Text & SEO Utility Hub",
-      "operatingSystem": "All",
-      "applicationCategory": "UtilitiesApplication",
-      "description": "Real-time word counter, character limit checker, and text case converter tool.",
-      "offers": {
-        "@type": "Offer",
-        "price": "0.00",
-        "priceCurrency": "USD"
+    [
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "TextCraft Studio - Word Counter & Analyzer",
+        "url": "https://craftsuite-central.imrankazmi98.workers.dev/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Image WebP Converter & Compressor",
+        "url": "https://craftsuite-central.imrankazmi98.workers.dev/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires Canvas API",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How is reading time calculated?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Reading time is calculated based on an average adult reading speed of 200 words per minute (WPM)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my text or image saved on any server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. All operations happen entirely inside your web browser using client-side JavaScript and Canvas APIs. No data ever leaves your device."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why convert images to WebP format?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "WebP images are significantly smaller in size compared to PNG and JPEG without sacrificing quality, leading to faster website loading speeds and better Core Web Vitals scores."
+            }
+          }
+        ]
       }
-    }
+    ]
     </script>
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between">
 
     <!-- Header / Navbar -->
     <header class="gradient-bg text-white shadow-md py-4 px-6">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
+        <div class="max-w-6xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
             <h1 class="text-xl font-bold tracking-wide flex items-center gap-2">
                 ⚡ TextCraft Studio
             </h1>
-            <span class="text-xs bg-emerald-500 text-slate-900 px-3 py-1 rounded-full font-semibold">100% Client-Side Fast</span>
+            <span class="text-xs bg-emerald-500 text-slate-900 px-3 py-1 rounded-full font-semibold">100% Client-Side Fast & Private</span>
         </div>
     </header>
 
-    <!-- Main Tool Workspace -->
+    <!-- Main Workspace -->
     <main class="max-w-6xl mx-auto px-4 py-8 flex-grow w-full">
-        
-        <!-- Tool Container -->
-        <div class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-8 mb-10">
+
+        <!-- Navigation Tabs -->
+        <div class="flex justify-center mb-6">
+            <div class="bg-slate-200 p-1 rounded-xl flex gap-1 border border-slate-300">
+                <button id="tabTextBtn" onclick="switchTab('text')" class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-slate-900 text-white shadow-sm">
+                    📝 Word Counter & Text Analyzer
+                </button>
+                <button id="tabImgBtn" onclick="switchTab('image')" class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900">
+                    🖼️ Image to WebP Converter
+                </button>
+            </div>
+        </div>
+
+        <!-- TOOL 1: Text Counter & Analyzer Container -->
+        <div id="textToolSection" class="bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-8 mb-10">
             <div class="mb-4 flex justify-between items-center">
                 <h2 class="text-2xl font-bold text-slate-900">Word Counter & Text Analyzer</h2>
                 <button onclick="clearText()" class="text-xs text-red-500 hover:text-red-700 font-medium">Clear Text</button>
@@ -94,17 +164,73 @@
             </div>
         </div>
 
-        <!-- Ad Placement Placeholder (For Future AdSense Integration) -->
+        <!-- TOOL 2: Image WebP Converter Container -->
+        <div id="imageToolSection" class="hidden bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-8 mb-10">
+            <div class="mb-4">
+                <h2 class="text-2xl font-bold text-slate-900">Image to WebP Converter & Compressor</h2>
+                <p class="text-xs text-slate-500 mt-1">Convert PNG/JPG images to optimized WebP format instantly without uploading to any server.</p>
+            </div>
+
+            <!-- Drop / Selection Zone -->
+            <div class="border-2 border-dashed border-slate-300 hover:border-slate-500 rounded-xl p-8 text-center bg-slate-50 transition cursor-pointer" onclick="document.getElementById('imageFileInput').click()">
+                <svg class="mx-auto h-12 w-12 text-slate-400 mb-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                </svg>
+                <p class="text-sm font-semibold text-slate-700">Click to select or drag and drop image here</p>
+                <p class="text-xs text-slate-400 mt-1">Supports PNG, JPG, JPEG, BMP</p>
+                <input type="file" id="imageFileInput" accept="image/png, image/jpeg, image/jpg, image/bmp" class="hidden" onchange="handleImageUpload(event)">
+            </div>
+
+            <!-- Controls Section -->
+            <div id="imageControls" class="hidden mt-6 pt-6 border-t border-slate-100">
+                <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-slate-100 p-4 rounded-xl">
+                    <div class="w-full sm:w-2/3">
+                        <label for="qualitySlider" class="block text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">
+                            Compression Quality: <span id="qualityLabel" class="text-slate-900 font-bold">80%</span>
+                        </label>
+                        <input type="range" id="qualitySlider" min="10" max="100" value="80" class="w-full h-2 bg-slate-300 rounded-lg appearance-none cursor-pointer accent-slate-900" oninput="updateQualityLabel(); processWebPConversion();">
+                    </div>
+                    <div class="text-right w-full sm:w-auto">
+                        <span class="block text-xs text-slate-500 font-medium">Original File Size</span>
+                        <span id="originalSizeText" class="text-sm font-bold text-slate-800">0 KB</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Preview & Result Section -->
+            <div id="imageResult" class="hidden mt-6 text-center bg-slate-50 p-6 rounded-xl border border-slate-200">
+                <h3 class="text-sm font-bold text-slate-700 mb-4">Converted WebP Preview</h3>
+                <div class="max-w-md mx-auto mb-4 overflow-hidden rounded-lg border border-slate-300 bg-white shadow-sm">
+                    <img id="webpPreviewImg" class="w-full h-auto object-contain max-h-80 mx-auto" alt="WebP Preview">
+                </div>
+
+                <div class="flex justify-center items-center gap-4 mb-6">
+                    <div class="bg-white px-4 py-2 rounded-lg border border-slate-200">
+                        <span class="block text-xs text-slate-400">WebP Size</span>
+                        <span id="webpSizeText" class="text-sm font-bold text-slate-900">0 KB</span>
+                    </div>
+                    <div id="savingsBadge" class="text-xs font-bold text-emerald-600 bg-emerald-100 px-3 py-1.5 rounded-full">
+                        0% Reduced
+                    </div>
+                </div>
+
+                <a id="downloadWebpBtn" download="converted-image.webp" class="inline-block bg-emerald-600 hover:bg-emerald-700 text-white font-semibold text-xs px-6 py-3 rounded-lg shadow transition">
+                    ⬇️ Download WebP Image
+                </a>
+            </div>
+        </div>
+
+        <!-- Ad Placement Placeholder -->
         <div class="my-8 text-center p-4 border border-dashed border-slate-300 rounded-lg text-slate-400 text-xs">
             [ Advertisement Space ]
         </div>
 
-        <!-- Comprehensive Supporting SEO Content Section (Prevents Thin Content Rejection) -->
+        <!-- Comprehensive SEO Content Section -->
         <article class="prose max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-slate-700">
-            <h2 class="text-2xl font-bold text-slate-900 mb-4">Mastering Content Length: Complete Guide for SEO & Social Media</h2>
-            <p class="mb-4">Whether you are drafting an academic research paper, writing an engaging blog post, or preparing social media captions, knowing your exact word and character counts is critical for maximum reach and optimal user engagement.</p>
+            <h2 class="text-2xl font-bold text-slate-900 mb-4">Mastering Content Length & Web Assets: Complete SEO Guide</h2>
+            <p class="mb-4">Whether you are drafting an academic research paper, writing an engaging blog post, or optimizing digital assets for fast page loads, precise measurement and image compression are critical for maximum reach and optimal search engine performance.</p>
 
-            <h3 class="text-xl font-semibold text-slate-900 mt-6 mb-3">Optimal Character & Word Count Limits</h3>
+            <h3 class="text-xl font-semibold text-slate-900 mt-6 mb-3">Optimal Character & Content Limits</h3>
             <div class="overflow-x-auto my-4">
                 <table class="w-full text-left border-collapse border border-slate-200 text-sm">
                     <thead>
@@ -146,8 +272,12 @@
                     <p class="text-sm">A: Reading time is calculated based on an average adult reading speed of 200 words per minute (WPM).</p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-slate-800">Q: Is my text saved or sent to any server?</h4>
-                    <p class="text-sm">A: No. All calculations happen entirely inside your web browser using JavaScript. No data ever leaves your device.</p>
+                    <h4 class="font-bold text-slate-800">Q: Is my text or image saved on any server?</h4>
+                    <p class="text-sm">A: No. All calculations and image conversions happen entirely inside your browser using JavaScript and Canvas APIs. No data ever leaves your device.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-slate-800">Q: Why should I convert images to WebP?</h4>
+                    <p class="text-sm">A: WebP images are typically 25% to 35% smaller than JPG or PNG files without losing perceptible quality, directly improving website loading performance and SEO rankings.</p>
                 </div>
             </div>
         </article>
@@ -160,27 +290,42 @@
 
     <!-- Interactive JavaScript Logic -->
     <script>
+        // Tab Navigation Switcher
+        function switchTab(tab) {
+            const textSection = document.getElementById('textToolSection');
+            const imageSection = document.getElementById('imageToolSection');
+            const tabTextBtn = document.getElementById('tabTextBtn');
+            const tabImgBtn = document.getElementById('tabImgBtn');
+
+            if (tab === 'text') {
+                textSection.classList.remove('hidden');
+                imageSection.classList.add('hidden');
+                tabTextBtn.className = "px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-slate-900 text-white shadow-sm";
+                tabImgBtn.className = "px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900";
+            } else {
+                textSection.classList.add('hidden');
+                imageSection.classList.remove('hidden');
+                tabImgBtn.className = "px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-slate-900 text-white shadow-sm";
+                tabTextBtn.className = "px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900";
+            }
+        }
+
+        // TOOL 1: Text Counter Logic
         function analyzeText() {
             const text = document.getElementById('textInput').value;
 
-            // Character Counts
             const charCount = text.length;
             const noSpaceCharCount = text.replace(/\s/g, '').length;
 
-            // Word Count
             const trimmedText = text.trim();
             const wordCount = trimmedText === '' ? 0 : trimmedText.split(/\s+/).length;
 
-            // Sentence Count
             const sentenceCount = trimmedText === '' ? 0 : (text.match(/[^\.!\?]+[\.!\?]+/g) || []).length || (text.length > 0 ? 1 : 0);
 
-            // Paragraph Count
             const paraCount = trimmedText === '' ? 0 : text.split(/\n+/).filter(p => p.trim().length > 0).length;
 
-            // Reading Time (Avg 200 WPM)
             const minutes = Math.ceil(wordCount / 200);
 
-            // Update DOM
             document.getElementById('wordCount').innerText = wordCount.toLocaleString();
             document.getElementById('charCount').innerText = charCount.toLocaleString();
             document.getElementById('noSpaceCharCount').innerText = noSpaceCharCount.toLocaleString();
@@ -219,6 +364,78 @@
             navigator.clipboard.writeText(text).then(() => {
                 alert('Text copied to clipboard!');
             });
+        }
+
+        // TOOL 2: Image WebP Converter Logic
+        let rawSelectedFile = null;
+        let loadedImageObject = null;
+
+        function handleImageUpload(e) {
+            const file = e.target.files[0];
+            if (!file) return;
+
+            rawSelectedFile = file;
+            document.getElementById('originalSizeText').innerText = formatFileSize(file.size);
+
+            const reader = new FileReader();
+            reader.onload = (event) => {
+                loadedImageObject = new Image();
+                loadedImageObject.onload = () => {
+                    document.getElementById('imageControls').classList.remove('hidden');
+                    document.getElementById('imageResult').classList.remove('hidden');
+                    processWebPConversion();
+                };
+                loadedImageObject.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function updateQualityLabel() {
+            const val = document.getElementById('qualitySlider').value;
+            document.getElementById('qualityLabel').innerText = `${val}%`;
+        }
+
+        function processWebPConversion() {
+            if (!loadedImageObject) return;
+
+            const canvas = document.createElement('canvas');
+            canvas.width = loadedImageObject.width;
+            canvas.height = loadedImageObject.height;
+
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(loadedImageObject, 0, 0);
+
+            const q = parseInt(document.getElementById('qualitySlider').value) / 100;
+            const webpDataUrl = canvas.toDataURL('image/webp', q);
+
+            document.getElementById('webpPreviewImg').src = webpDataUrl;
+            document.getElementById('downloadWebpBtn').href = webpDataUrl;
+
+            // Estimate WebP size from Base64 String
+            const base64Head = 'data:image/webp;base64,';
+            const sizeInBytes = Math.round((webpDataUrl.length - base64Head.length) * 3 / 4);
+            document.getElementById('webpSizeText').innerText = formatFileSize(sizeInBytes);
+
+            // Calculate Compression Savings %
+            const originalBytes = rawSelectedFile.size;
+            const reduction = Math.round(((originalBytes - sizeInBytes) / originalBytes) * 100);
+
+            const badge = document.getElementById('savingsBadge');
+            if (reduction > 0) {
+                badge.innerText = `${reduction}% Smaller`;
+                badge.className = "text-xs font-bold text-emerald-600 bg-emerald-100 px-3 py-1.5 rounded-full";
+            } else {
+                badge.innerText = `${Math.abs(reduction)}% Larger`;
+                badge.className = "text-xs font-bold text-amber-600 bg-amber-100 px-3 py-1.5 rounded-full";
+            }
+        }
+
+        function formatFileSize(bytes) {
+            if (bytes === 0) return '0 Bytes';
+            const k = 1024;
+            const sizes = ['Bytes', 'KB', 'MB', 'GB'];
+            const i = Math.floor(Math.log(bytes) / Math.log(k));
+            return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
         }
     </script>
 </body>
