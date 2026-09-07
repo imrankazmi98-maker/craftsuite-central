@@ -4,33 +4,39 @@
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="gYp9E1KM2L3SfJ5ihRkRx8TmQfdzS2rqveavTraYX88" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TextCraft Studio - Free Word Counter & WebP Converter</title>
-    <meta name="description" content="Free online word counter, text case converter, and fast image to WebP converter. 100% private, browser-based utilities for writers and developers.">
-    <meta name="keywords" content="word counter, text analyzer, image to webp, webp converter, character count, sentence counter, reading time">
+    <title>TextCraft Studio - Word Counter, WebP Converter & SVG Studio</title>
+    <meta name="description" content="Free online word counter, text case converter, fast image to WebP converter, and live SVG viewer & code editor. 100% private, browser-based utilities for writers and developers.">
+    <meta name="keywords" content="word counter, text analyzer, image to webp, webp converter, svg viewer, svg editor, svg to png, react svg, character count, sentence counter">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://craftsuite-central.craftsuite-hub.workers.dev/" />
 
-   <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/" />
-<meta property="og:title" content="TextCraft Studio - Free Word Counter & WebP Converter" />
-<meta property="og:description" content="Free online word counter, text case converter, and fast image to WebP converter. 100% private, browser-based utilities." />
-<meta property="og:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.png" />
-<meta property="og:image:width" content="1200" />
-<meta property="og:image:height" content="630" />
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/" />
+    <meta property="og:title" content="TextCraft Studio - Word Counter, WebP Converter & SVG Studio" />
+    <meta property="og:description" content="Free online word counter, text case converter, fast image to WebP converter, and live SVG viewer & code editor. 100% private, browser-based utilities." />
+    <meta property="og:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
 
-<!-- Twitter / X -->
-<meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/" />
-<meta name="twitter:title" content="TextCraft Studio - Free Word Counter & WebP Converter" />
-<meta name="twitter:description" content="Free online word counter, text case converter, and fast image to WebP converter. 100% private, browser-based utilities." />
-<meta name="twitter:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.png" />
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/" />
+    <meta name="twitter:title" content="TextCraft Studio - Word Counter, WebP Converter & SVG Studio" />
+    <meta name="twitter:description" content="Free online word counter, text case converter, fast image to WebP converter, and live SVG viewer & code editor. 100% private, browser-based utilities." />
+    <meta name="twitter:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.png" />
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .gradient-bg {
             background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
+        }
+        .bg-grid-pattern {
+            background-color: #1e293b;
+            background-image: linear-gradient(45deg, #334155 25%, transparent 25%), linear-gradient(-45deg, #334155 25%, transparent 25%), linear-gradient(45deg, transparent 75%, #334155 75%), linear-gradient(-45deg, transparent 75%, #334155 75%);
+            background-size: 20px 20px;
+            background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
         }
     </style>
 
@@ -41,7 +47,7 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "TextCraft Studio - Word Counter & Analyzer",
-        "url": "https://craftsuite-central.imrankazmi98.workers.dev/",
+        "url": "https://craftsuite-central.craftsuite-hub.workers.dev/",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires JavaScript",
@@ -55,10 +61,24 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Image WebP Converter & Compressor",
-        "url": "https://craftsuite-central.imrankazmi98.workers.dev/",
+        "url": "https://craftsuite-central.craftsuite-hub.workers.dev/",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "All",
         "browserRequirements": "Requires Canvas API",
+        "offers": {
+          "@type": "Offer",
+          "price": "0.00",
+          "priceCurrency": "USD"
+        }
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "SVG Studio - Editor, Viewer & Converter",
+        "url": "https://craftsuite-central.craftsuite-hub.workers.dev/",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "All",
+        "browserRequirements": "Requires JavaScript",
         "offers": {
           "@type": "Offer",
           "price": "0.00",
@@ -79,7 +99,7 @@
           },
           {
             "@type": "Question",
-            "name": "Is my text or image saved on any server?",
+            "name": "Is my text, image, or SVG code saved on any server?",
             "acceptedAnswer": {
               "@type": "Answer",
               "text": "No. All operations happen entirely inside your web browser using client-side JavaScript and Canvas APIs. No data ever leaves your device."
@@ -115,12 +135,15 @@
 
         <!-- Navigation Tabs -->
         <div class="flex justify-center mb-6">
-            <div class="bg-slate-200 p-1 rounded-xl flex gap-1 border border-slate-300">
-                <button id="tabTextBtn" onclick="switchTab('text')" class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-slate-900 text-white shadow-sm">
-                    📝 Word Counter & Text Analyzer
+            <div class="bg-slate-200 p-1 rounded-xl flex flex-wrap justify-center gap-1 border border-slate-300">
+                <button id="tabTextBtn" onclick="switchTab('text')" class="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-slate-900 text-white shadow-sm">
+                    📝 Word Counter
                 </button>
-                <button id="tabImgBtn" onclick="switchTab('image')" class="px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900">
-                    🖼️ Image to WebP Converter
+                <button id="tabImgBtn" onclick="switchTab('image')" class="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900">
+                    🖼️ Image to WebP
+                </button>
+                <button id="tabSvgBtn" onclick="switchTab('svg')" class="px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900">
+                    🎨 SVG Studio
                 </button>
             </div>
         </div>
@@ -231,6 +254,61 @@
             </div>
         </div>
 
+        <!-- TOOL 3: SVG Studio Container -->
+        <div id="svgToolSection" class="hidden bg-white rounded-2xl shadow-xl border border-slate-200 p-6 md:p-8 mb-10">
+            <div class="mb-4 flex flex-col sm:flex-row justify-between sm:items-center gap-4">
+                <div>
+                    <h2 class="text-2xl font-bold text-slate-900">SVG Viewer, Editor & Converter</h2>
+                    <p class="text-xs text-slate-500 mt-1">View, edit, format SVG code, and export to PNG, Data URI, or React components.</p>
+                </div>
+                <div class="flex flex-wrap items-center gap-2">
+                    <label for="svgFileInput" class="cursor-pointer bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-2 rounded-lg font-medium border border-slate-300 transition">
+                        📁 Upload SVG
+                    </label>
+                    <input type="file" id="svgFileInput" accept=".svg,image/svg+xml" class="hidden" onchange="handleSvgUpload(event)">
+                    <button onclick="formatSvgCode()" class="bg-slate-100 hover:bg-slate-200 text-slate-700 text-xs px-3 py-2 rounded-lg font-medium border border-slate-300 transition">✨ Prettify</button>
+                    <button onclick="clearSvgCode()" class="text-xs text-red-500 hover:text-red-700 font-medium px-2 py-2">Clear</button>
+                </div>
+            </div>
+
+            <!-- Editor & Preview Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-6">
+                <!-- SVG Code Textarea -->
+                <div class="flex flex-col">
+                    <label for="svgInputCode" class="text-xs font-semibold uppercase tracking-wider text-slate-600 mb-2">SVG Source Code</label>
+                    <textarea id="svgInputCode" placeholder="Paste your SVG code here..." 
+                        class="w-full h-80 p-4 border border-slate-300 rounded-xl focus:ring-2 focus:ring-slate-900 focus:border-transparent outline-none transition font-mono text-xs text-sky-400 bg-slate-900 resize-y"
+                        oninput="updateSvgPreview()"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <circle cx="50" cy="50" r="40" fill="#10b981" />
+  <path d="M30 50 L45 65 L70 35" stroke="#ffffff" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></textarea>
+                </div>
+
+                <!-- Live Visual Display -->
+                <div class="flex flex-col">
+                    <div class="flex justify-between items-center mb-2">
+                        <span class="text-xs font-semibold uppercase tracking-wider text-slate-600">Live Visual Preview</span>
+                        <div class="flex items-center gap-1 text-xs">
+                            <span class="text-slate-400 mr-1">Bg:</span>
+                            <button onclick="setSvgBg('grid')" id="bgGridBtn" class="px-2 py-1 rounded border border-slate-300 bg-slate-200 text-slate-800 font-semibold">Grid</button>
+                            <button onclick="setSvgBg('dark')" id="bgDarkBtn" class="px-2 py-1 rounded border border-slate-300 bg-slate-100 text-slate-600">Dark</button>
+                            <button onclick="setSvgBg('light')" id="bgLightBtn" class="px-2 py-1 rounded border border-slate-300 bg-slate-100 text-slate-600">Light</button>
+                        </div>
+                    </div>
+                    <div id="svgPreviewDisplay" class="w-full h-80 rounded-xl border border-slate-300 bg-grid-pattern flex items-center justify-center p-4 overflow-hidden relative">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Action / Export Buttons -->
+            <div class="flex flex-wrap gap-3 mt-6 pt-6 border-t border-slate-100">
+                <button onclick="downloadSvgAsPng()" class="bg-emerald-600 hover:bg-emerald-700 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">⬇️ Download PNG</button>
+                <button onclick="copySvgCode()" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">📋 Copy SVG</button>
+                <button onclick="copyDataUri()" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">🔗 Copy Data URI</button>
+                <button onclick="copyReactComponent()" class="bg-slate-800 hover:bg-slate-900 text-white text-xs px-4 py-2.5 rounded-lg transition font-medium">⚛️ Copy React JSX</button>
+            </div>
+        </div>
+
         <!-- Ad Placement Placeholder -->
         <div class="my-8 text-center p-4 border border-dashed border-slate-300 rounded-lg text-slate-400 text-xs">
             [ Advertisement Space ]
@@ -239,7 +317,7 @@
         <!-- Comprehensive SEO Content Section -->
         <article class="prose max-w-none bg-white p-8 rounded-2xl shadow-sm border border-slate-200 text-slate-700">
             <h2 class="text-2xl font-bold text-slate-900 mb-4">Mastering Content Length & Web Assets: Complete SEO Guide</h2>
-            <p class="mb-4">Whether you are drafting an academic research paper, writing an engaging blog post, or optimizing digital assets for fast page loads, precise measurement and image compression are critical for maximum reach and optimal search engine performance.</p>
+            <p class="mb-4">Whether you are drafting an academic research paper, writing an engaging blog post, or optimizing digital web assets like WebP images and SVG vectors, precise measurement and asset optimization are critical for maximum page speed and optimal search engine rankings.</p>
 
             <h3 class="text-xl font-semibold text-slate-900 mt-6 mb-3">Optimal Character & Content Limits</h3>
             <div class="overflow-x-auto my-4">
@@ -283,12 +361,12 @@
                     <p class="text-sm">A: Reading time is calculated based on an average adult reading speed of 200 words per minute (WPM).</p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-slate-800">Q: Is my text or image saved on any server?</h4>
-                    <p class="text-sm">A: No. All calculations and image conversions happen entirely inside your browser using JavaScript and Canvas APIs. No data ever leaves your device.</p>
+                    <h4 class="font-bold text-slate-800">Q: Is my text, image, or SVG code saved on any server?</h4>
+                    <p class="text-sm">A: No. All calculations, SVG renders, and image conversions happen entirely inside your browser using JavaScript and Canvas APIs. No data ever leaves your device.</p>
                 </div>
                 <div>
-                    <h4 class="font-bold text-slate-800">Q: Why should I convert images to WebP?</h4>
-                    <p class="text-sm">A: WebP images are typically 25% to 35% smaller than JPG or PNG files without losing perceptible quality, directly improving website loading performance and SEO rankings.</p>
+                    <h4 class="font-bold text-slate-800">Q: Why should I convert images to WebP or use SVGs?</h4>
+                    <p class="text-sm">A: WebP images are typically 25% to 35% smaller than JPG or PNG files without losing quality. SVGs provide resolution-independent vector graphics that load fast and look sharp on all displays.</p>
                 </div>
             </div>
         </article>
@@ -305,19 +383,35 @@
         function switchTab(tab) {
             const textSection = document.getElementById('textToolSection');
             const imageSection = document.getElementById('imageToolSection');
+            const svgSection = document.getElementById('svgToolSection');
+
             const tabTextBtn = document.getElementById('tabTextBtn');
             const tabImgBtn = document.getElementById('tabImgBtn');
+            const tabSvgBtn = document.getElementById('tabSvgBtn');
+
+            const activeClass = "px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-slate-900 text-white shadow-sm";
+            const inactiveClass = "px-4 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900";
+
+            // Hide all sections
+            textSection.classList.add('hidden');
+            imageSection.classList.add('hidden');
+            svgSection.classList.add('hidden');
+
+            // Reset buttons styling
+            tabTextBtn.className = inactiveClass;
+            tabImgBtn.className = inactiveClass;
+            tabSvgBtn.className = inactiveClass;
 
             if (tab === 'text') {
                 textSection.classList.remove('hidden');
-                imageSection.classList.add('hidden');
-                tabTextBtn.className = "px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-slate-900 text-white shadow-sm";
-                tabImgBtn.className = "px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900";
-            } else {
-                textSection.classList.add('hidden');
+                tabTextBtn.className = activeClass;
+            } else if (tab === 'image') {
                 imageSection.classList.remove('hidden');
-                tabImgBtn.className = "px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition bg-slate-900 text-white shadow-sm";
-                tabTextBtn.className = "px-5 py-2.5 rounded-lg text-xs sm:text-sm font-semibold transition text-slate-600 hover:text-slate-900";
+                tabImgBtn.className = activeClass;
+            } else if (tab === 'svg') {
+                svgSection.classList.remove('hidden');
+                tabSvgBtn.className = activeClass;
+                updateSvgPreview();
             }
         }
 
@@ -474,6 +568,137 @@
             const i = Math.floor(Math.log(bytes) / Math.log(k));
             return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i];
         }
+
+        // TOOL 3: SVG Studio Logic
+        function updateSvgPreview() {
+            const code = document.getElementById("svgInputCode").value;
+            const display = document.getElementById("svgPreviewDisplay");
+            display.innerHTML = code;
+
+            const svgElement = display.querySelector('svg');
+            if (svgElement) {
+                svgElement.style.maxWidth = '100%';
+                svgElement.style.maxHeight = '100%';
+                svgElement.style.height = 'auto';
+            }
+        }
+
+        function setSvgBg(type) {
+            const display = document.getElementById("svgPreviewDisplay");
+            const gridBtn = document.getElementById("bgGridBtn");
+            const darkBtn = document.getElementById("bgDarkBtn");
+            const lightBtn = document.getElementById("bgLightBtn");
+
+            display.className = "w-full h-80 rounded-xl border border-slate-300 flex items-center justify-center p-4 overflow-hidden relative";
+
+            const activeClass = "px-2 py-1 rounded border border-slate-300 bg-slate-200 text-slate-800 font-semibold";
+            const inactiveClass = "px-2 py-1 rounded border border-slate-300 bg-slate-100 text-slate-600";
+
+            gridBtn.className = inactiveClass;
+            darkBtn.className = inactiveClass;
+            lightBtn.className = inactiveClass;
+
+            if (type === 'grid') {
+                display.classList.add('bg-grid-pattern');
+                gridBtn.className = activeClass;
+            } else if (type === 'dark') {
+                display.classList.add('bg-slate-900');
+                darkBtn.className = activeClass;
+            } else if (type === 'light') {
+                display.classList.add('bg-white');
+                lightBtn.className = activeClass;
+            }
+        }
+
+        function handleSvgUpload(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    document.getElementById("svgInputCode").value = e.target.result;
+                    updateSvgPreview();
+                };
+                reader.readAsText(file);
+            }
+        }
+
+        function formatSvgCode() {
+            let textarea = document.getElementById("svgInputCode");
+            if (!textarea.value.trim()) return;
+            let xml = textarea.value.replace(/>\s*</g, '>\n<').trim();
+            textarea.value = xml;
+            updateSvgPreview();
+        }
+
+        function clearSvgCode() {
+            document.getElementById("svgInputCode").value = "";
+            document.getElementById("svgPreviewDisplay").innerHTML = "";
+        }
+
+        function downloadSvgAsPng() {
+            const svgString = document.getElementById("svgInputCode").value;
+            if (!svgString.trim()) return alert("Please enter or upload SVG code first.");
+
+            const blob = new Blob([svgString], { type: "image/svg+xml;charset=utf-8" });
+            const url = URL.createObjectURL(blob);
+            const img = new Image();
+
+            img.onload = function () {
+                const canvas = document.createElement("canvas");
+                canvas.width = img.width || 800;
+                canvas.height = img.height || 800;
+                const ctx = canvas.getContext("2d");
+                ctx.drawImage(img, 0, 0);
+                URL.revokeObjectURL(url);
+
+                const a = document.createElement("a");
+                a.download = "textcraft-svg-export.png";
+                a.href = canvas.toDataURL("image/png");
+                a.click();
+            };
+            img.onerror = function() {
+                alert("Invalid SVG code. Unable to convert to PNG.");
+            };
+            img.src = url;
+        }
+
+        function copySvgCode() {
+            const code = document.getElementById("svgInputCode").value;
+            if (!code) return;
+            navigator.clipboard.writeText(code).then(() => {
+                alert("SVG Code copied to clipboard!");
+            });
+        }
+
+        function copyDataUri() {
+            const code = document.getElementById("svgInputCode").value;
+            if (!code) return;
+            const encoded = "data:image/svg+xml;charset=utf-8," + encodeURIComponent(code);
+            navigator.clipboard.writeText(encoded).then(() => {
+                alert("Data URI copied to clipboard!");
+            });
+        }
+
+        function copyReactComponent() {
+            let code = document.getElementById("svgInputCode").value;
+            if (!code) return;
+            code = code.replace(/class=/g, "className=")
+                       .replace(/stroke-width=/g, "strokeWidth=")
+                       .replace(/fill-rule=/g, "fillRule=")
+                       .replace(/stroke-linecap=/g, "strokeLinecap=")
+                       .replace(/stroke-linejoin=/g, "strokeLinejoin=")
+                       .replace(/clip-rule=/g, "clipRule=");
+
+            const jsx = `export const SvgIcon = (props) => (\n  ${code}\n);`;
+            navigator.clipboard.writeText(jsx).then(() => {
+                alert("React JSX Component copied to clipboard!");
+            });
+        }
+
+        // Initialize SVG Preview on Page Load
+        document.addEventListener("DOMContentLoaded", () => {
+            updateSvgPreview();
+        });
     </script>
 </body>
 </html>
