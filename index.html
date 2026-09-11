@@ -1,513 +1,217 @@
 <!DOCTYPE html>
-<html lang="en" class="dark scroll-smooth">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="google-site-verification" content="gYp9E1KM2L3SfJ5ihRkRx8TmQfdzS2rqveavTraYX88" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>TextCraft Studio - Free Online Developer, Text & SEO Tools Suite</title>
-    <meta name="description" content="100% private, browser-based web tools suite. Convert WebP, view SVGs, count words, format JSON, and generate SEO meta tags instantly.">
-    <meta name="keywords" content="word counter, webp converter, svg viewer, svg editor, meta tag generator, json formatter, text analyzer, free developer tools, seo tools">
+
+    <title>TextCraft Studio - Free Online Text, Image, SEO & Developer Tools</title>
+    <meta name="description" content="Free, private, browser-based tools for text, images, SEO and code. Word counter, WebP converter, JSON formatter, meta tag generator and more - no signup, no uploads.">
+    <meta name="keywords" content="online tools, free web tools, word counter, webp converter, json formatter, meta tag generator, base64 converter, developer tools">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://craftsuite-central.craftsuite-hub.workers.dev/" />
 
-    <!-- Open Graph & Social Cards -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/" />
-    <meta property="og:title" content="TextCraft Studio - Free Developer, Text & SEO Tools" />
-    <meta property="og:description" content="100% private, browser-based web tools suite. Convert WebP, view SVGs, count words, format JSON, and generate SEO meta tags instantly." />
-    <meta property="og:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.jpg" />
+    <meta property="og:title" content="TextCraft Studio - Free Online Text, Image, SEO & Developer Tools" />
+    <meta property="og:description" content="Free, private, browser-based tools for text, images, SEO and code. No signup, no uploads." />
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/" />
-    <meta name="twitter:title" content="TextCraft Studio - Free Developer & SEO Tools Suite" />
-    <meta name="twitter:description" content="Fast, free, and private browser-based utilities for developers, writers, and SEO professionals." />
-    <meta name="twitter:image" content="https://craftsuite-central.craftsuite-hub.workers.dev/og-image.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="TextCraft Studio - Free Online Tools" />
+    <meta name="twitter:description" content="Free, private, browser-based tools for text, images, SEO and code." />
 
-    <!-- Tailwind CSS & FontAwesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <script>
         tailwind.config = {
-            darkMode: 'class',
             theme: {
                 extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
                     colors: {
-                        brand: {
-                            50: '#eef2ff',
-                            500: '#6366f1',
-                            600: '#4f46e5',
-                            accent: '#06b6d4',
-                        }
+                        brand: { 50: '#eef2ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', accent: '#06b6d4' }
                     }
                 }
             }
         }
     </script>
 
-    <!-- Schema Markup for Google Stars Rating
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "WebApplication",
+      "@type": "WebSite",
       "name": "TextCraft Studio",
-      "url": "https://craftsuite-central.craftsuite-hub.workers.dev/",
-      "description": "Free online developer, text analysis, image conversion, and SEO tool suite.",
-      "applicationCategory": "DeveloperApplication",
-      "operatingSystem": "All",
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1280",
-        "bestRating": "5"
-      }
+      "url": "https://craftsuite-central.craftsuite-hub.workers.dev/"
     }
-    </script>  -->
+    </script>
 </head>
-<body class="bg-slate-950 text-slate-100 font-sans antialiased selection:bg-brand-500 selection:text-white">
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
 
-    <!-- Header / Navbar -->
-    <header class="sticky top-0 z-50 bg-slate-900/90 backdrop-blur-md border-b border-slate-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
-            <a href="#" class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white font-bold text-xl shadow-lg shadow-brand-500/20">
+    <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-3 shrink-0">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white font-bold shadow-sm">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
                 </div>
-                <span class="font-extrabold text-xl tracking-tight bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
-                    TextCraft<span class="text-brand-accent">Studio</span>
+                <span class="font-extrabold text-lg tracking-tight text-slate-900">
+                    TextCraft<span class="text-brand-600">Studio</span>
                 </span>
             </a>
-            <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-                <a href="#word-counter-tool" class="hover:text-brand-accent transition">Text Tools</a>
-                <a href="#webp-tool" class="hover:text-brand-accent transition">Image Tools</a>
-                <a href="#meta-tool" class="hover:text-brand-accent transition">SEO Tools</a>
-                <a href="#json-tool" class="hover:text-brand-accent transition">Dev Tools</a>
-                <a href="#faqs" class="hover:text-brand-accent transition">FAQs</a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+                <a href="#text-tools" class="hover:text-brand-600 transition">Text Tools</a>
+                <a href="#image-tools" class="hover:text-brand-600 transition">Image Tools</a>
+                <a href="#seo-tools" class="hover:text-brand-600 transition">SEO Tools</a>
+                <a href="#dev-tools" class="hover:text-brand-600 transition">Dev Tools</a>
             </nav>
+            <div class="flex-1 max-w-xs relative hidden sm:block">
+                <i class="fa-solid fa-magnifying-glass absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-xs"></i>
+                <input type="text" id="toolSearch" placeholder="Search tools..."
+                    class="w-full pl-9 pr-3 py-2 rounded-lg bg-slate-100 border border-transparent text-sm text-slate-800 placeholder-slate-400 focus:outline-none focus:border-brand-500 focus:bg-white transition">
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="py-16 bg-gradient-to-b from-slate-900 via-slate-950 to-slate-950 border-b border-slate-800 text-center px-4">
-        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-accent text-xs font-semibold mb-4">
-            <i class="fa-solid fa-bolt"></i> 100% Client-Side & Private Utilities
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-brand-700 via-brand-600 to-cyan-500 text-center px-4 py-14 sm:py-20">
+        <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/15 border border-white/20 text-white text-xs font-semibold mb-4">
+            <i class="fa-solid fa-lock"></i> 100% Browser-Based. Nothing Is Uploaded.
         </span>
-        <h1 class="text-3xl sm:text-5xl font-black text-white tracking-tight mb-4">
-            All-In-One Developer, Text & SEO Tools Suite
+        <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight mb-4">
+            Free Online Tools for Text, Images, SEO & Code
         </h1>
-        <p class="text-slate-400 text-base sm:text-lg max-w-2xl mx-auto mb-8">
-            Click on any tool below to instantly convert images, analyze text, generate schema, and validate code.
+        <p class="text-indigo-100 text-base sm:text-lg max-w-2xl mx-auto">
+            Pick a tool below and get your result instantly - no account, no watermark, no file leaving your device.
         </p>
-
-        <!-- Search Filter -->
-        <div class="max-w-xl mx-auto relative">
-            <i class="fa-solid fa-magnifying-glass absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
-            <input type="text" id="toolSearch" placeholder="Search tools (Word Counter, WebP, SVG, JSON)..." 
-                class="w-full pl-12 pr-4 py-3 rounded-xl bg-slate-800 border border-slate-700 text-white placeholder-slate-400 focus:outline-none focus:border-brand-accent transition">
-        </div>
     </section>
 
-    <!-- MAIN INTERACTIVE TOOLS WORKSPACE -->
-    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 space-y-16">
+    <!-- Main Layout -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid grid-cols-1 lg:grid-cols-4 gap-8">
 
-        <!-- CATEGORY 1: TEXT TOOLS -->
-        <section class="space-y-8">
-            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-3">
-                <i class="fa-solid fa-font text-brand-accent"></i> Text & Content Suite
-            </h2>
+        <!-- Tools Column -->
+        <div class="lg:col-span-3 space-y-10">
 
-            <!-- TOOL 1: Word Counter -->
-            <div id="word-counter-tool" class="tool-card bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-                <h3 class="text-xl font-bold text-white mb-2 flex items-center justify-between">
-                    <span><i class="fa-solid fa-calculator text-indigo-400 mr-2"></i> Word & Character Counter</span>
-                    <span class="text-xs bg-brand-500/10 text-brand-accent px-2 py-1 rounded">Active Tool</span>
-                </h3>
-                <p class="text-slate-400 text-sm mb-4">Type or paste your content below for real-time word, sentence, and reading time statistics.</p>
-                
-                <textarea id="wc-input" oninput="processTextStats()" rows="6" placeholder="Paste your text here..." 
-                    class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl text-white focus:outline-none focus:border-brand-accent transition mb-4"></textarea>
-
-                <!-- Stats Grid -->
-                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-4 text-center">
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
-                        <span class="block text-2xl font-black text-brand-accent" id="wc-words">0</span>
-                        <span class="text-xs text-slate-400">Words</span>
-                    </div>
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
-                        <span class="block text-2xl font-black text-indigo-400" id="wc-chars">0</span>
-                        <span class="text-xs text-slate-400">Characters</span>
-                    </div>
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
-                        <span class="block text-2xl font-black text-cyan-400" id="wc-chars-nospace">0</span>
-                        <span class="text-xs text-slate-400">Chars (No Space)</span>
-                    </div>
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
-                        <span class="block text-2xl font-black text-purple-400" id="wc-sentences">0</span>
-                        <span class="text-xs text-slate-400">Sentences</span>
-                    </div>
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
-                        <span class="block text-2xl font-black text-emerald-400" id="wc-lines">0</span>
-                        <span class="text-xs text-slate-400">Lines</span>
-                    </div>
-                    <div class="bg-slate-950 p-3 rounded-xl border border-slate-800">
-                        <span class="block text-2xl font-black text-amber-400" id="wc-reading-time">0 min</span>
-                        <span class="text-xs text-slate-400">Reading Time</span>
-                    </div>
+            <!-- TEXT TOOLS -->
+            <section id="text-tools">
+                <div class="bg-brand-600 rounded-t-xl px-5 py-3">
+                    <h2 class="text-white font-bold text-lg"><i class="fa-solid fa-font mr-2"></i>Text Content Tools</h2>
+                    <p class="text-indigo-100 text-xs mt-0.5">Count words, change case, clean up lists.</p>
                 </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 bg-white border border-t-0 border-slate-200 rounded-b-xl p-4 tool-grid">
+                    <a href="/tools/word-counter.html" class="tool-link flex items-center gap-3 p-3 rounded-lg hover:bg-brand-50 transition group">
+                        <div class="w-9 h-9 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center group-hover:bg-brand-600 group-hover:text-white transition"><i class="fa-solid fa-calculator"></i></div>
+                        <span class="text-sm font-medium text-slate-700">Word Counter</span>
+                    </a>
+                    <a href="/tools/case-converter.html" class="tool-link flex items-center gap-3 p-3 rounded-lg hover:bg-brand-50 transition group">
+                        <div class="w-9 h-9 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center group-hover:bg-brand-600 group-hover:text-white transition"><i class="fa-solid fa-text-height"></i></div>
+                        <span class="text-sm font-medium text-slate-700">Case Converter</span>
+                    </a>
+                    <a href="/tools/duplicate-remover.html" class="tool-link flex items-center gap-3 p-3 rounded-lg hover:bg-brand-50 transition group">
+                        <div class="w-9 h-9 rounded-lg bg-brand-50 text-brand-600 flex items-center justify-center group-hover:bg-brand-600 group-hover:text-white transition"><i class="fa-solid fa-filter"></i></div>
+                        <span class="text-sm font-medium text-slate-700">Remove Duplicate Lines</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- IMAGE TOOLS -->
+            <section id="image-tools">
+                <div class="bg-emerald-600 rounded-t-xl px-5 py-3">
+                    <h2 class="text-white font-bold text-lg"><i class="fa-solid fa-image mr-2"></i>Image & Graphics Tools</h2>
+                    <p class="text-emerald-100 text-xs mt-0.5">Convert and preview images, all inside your browser.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 bg-white border border-t-0 border-slate-200 rounded-b-xl p-4 tool-grid">
+                    <a href="/tools/webp-converter.html" class="tool-link flex items-center gap-3 p-3 rounded-lg hover:bg-emerald-50 transition group">
+                        <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition"><i class="fa-solid fa-file-image"></i></div>
+                        <span class="text-sm font-medium text-slate-700">Image to WebP</span>
+                    </a>
+                    <a href="/tools/svg-viewer.html" class="tool-link flex items-center gap-3 p-3 rounded-lg hover:bg-emerald-50 transition group">
+                        <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center group-hover:bg-emerald-600 group-hover:text-white transition"><i class="fa-solid fa-vector-square"></i></div>
+                        <span class="text-sm font-medium text-slate-700">SVG Viewer</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- SEO TOOLS -->
+            <section id="seo-tools">
+                <div class="bg-amber-600 rounded-t-xl px-5 py-3">
+                    <h2 class="text-white font-bold text-lg"><i class="fa-solid fa-chart-line mr-2"></i>SEO & Metadata Tools</h2>
+                    <p class="text-amber-100 text-xs mt-0.5">Generate the tags search engines and crawlers read.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 bg-white border border-t-0 border-slate-200 rounded-b-xl p-4 tool-grid">
+                    <a href="/tools/meta-tag-generator.html" class="tool-link flex items-center gap-3 p-3 rounded-lg hover:bg-amber-50 transition group">
+                        <div class="w-9 h-9 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition"><i class="fa-solid fa-tags"></i></div>
+                        <span class="text-sm font-medium text-slate-700">Meta Tag Generator</span>
+                    </a>
+                    <a href="/tools/robots-txt-generator.html" class="tool-link flex items-center gap-3 p-3 rounded-lg hover:bg-amber-50 transition group">
+                        <div class="w-9 h-9 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-white transition"><i class="fa-solid fa-robot"></i></div>
+                        <span class="text-sm font-medium text-slate-700">Robots.txt Generator</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- DEV TOOLS -->
+            <section id="dev-tools">
+                <div class="bg-sky-600 rounded-t-xl px-5 py-3">
+                    <h2 class="text-white font-bold text-lg"><i class="fa-solid fa-code mr-2"></i>Developer & Code Tools</h2>
+                    <p class="text-sky-100 text-xs mt-0.5">Format, validate and encode data on the fly.</p>
+                </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 bg-white border border-t-0 border-slate-200 rounded-b-xl p-4 tool-grid">
+                    <a href="/tools/json-formatter.html" class="tool-link flex items-center gap-3 p-3 rounded-lg hover:bg-sky-50 transition group">
+                        <div class="w-9 h-9 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white transition"><i class="fa-solid fa-code-commit"></i></div>
+                        <span class="text-sm font-medium text-slate-700">JSON Formatter</span>
+                    </a>
+                    <a href="/tools/base64-converter.html" class="tool-link flex items-center gap-3 p-3 rounded-lg hover:bg-sky-50 transition group">
+                        <div class="w-9 h-9 rounded-lg bg-sky-50 text-sky-600 flex items-center justify-center group-hover:bg-sky-600 group-hover:text-white transition"><i class="fa-solid fa-lock"></i></div>
+                        <span class="text-sm font-medium text-slate-700">Base64 Encoder / Decoder</span>
+                    </a>
+                </div>
+            </section>
+
+            <!-- About -->
+            <section class="bg-white border border-slate-200 rounded-xl p-6 sm:p-8">
+                <h2 class="text-xl font-bold text-slate-900 mb-3">Why TextCraft Studio?</h2>
+                <p class="text-sm leading-relaxed text-slate-600">
+                    Every tool on this site runs entirely in your browser using JavaScript. Your text, images and code
+                    never leave your device or touch a server, which means results are instant and your data stays private.
+                    No sign-up, no watermark, no daily limits.
+                </p>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="space-y-6">
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-fire text-orange-500"></i> Popular Tools</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/tools/json-formatter.html" class="text-slate-600 hover:text-brand-600 flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i>JSON Formatter</a></li>
+                    <li><a href="/tools/word-counter.html" class="text-slate-600 hover:text-brand-600 flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i>Word Counter</a></li>
+                    <li><a href="/tools/webp-converter.html" class="text-slate-600 hover:text-brand-600 flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i>Image to WebP</a></li>
+                    <li><a href="/tools/meta-tag-generator.html" class="text-slate-600 hover:text-brand-600 flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i>Meta Tag Generator</a></li>
+                    <li><a href="/tools/base64-converter.html" class="text-slate-600 hover:text-brand-600 flex items-center gap-2"><i class="fa-solid fa-check text-emerald-500 text-xs"></i>Base64 Encoder</a></li>
+                </ul>
             </div>
-
-            <!-- TOOL 2: Text Case Converter -->
-            <div id="case-converter-tool" class="tool-card bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-                <h3 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-text-height text-blue-400 mr-2"></i> Text Case Converter</h3>
-                <p class="text-slate-400 text-sm mb-4">Convert your text to different cases instantly.</p>
-                
-                <textarea id="case-input" rows="4" placeholder="Enter text to convert..." 
-                    class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl text-white focus:outline-none focus:border-brand-accent transition mb-4"></textarea>
-
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="convertCase('upper')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white">UPPERCASE</button>
-                    <button onclick="convertCase('lower')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white">lowercase</button>
-                    <button onclick="convertCase('title')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white">Title Case</button>
-                    <button onclick="convertCase('sentence')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white">Sentence case</button>
-                    <button onclick="convertCase('slug')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white">url-slug-format</button>
-                    <button onclick="convertCase('camel')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white">camelCase</button>
-                    <button onclick="copyToClipboard('case-input')" class="ml-auto px-4 py-2 bg-brand-600 hover:bg-brand-500 text-xs font-semibold rounded-lg text-white"><i class="fa-solid fa-copy mr-1"></i> Copy Text</button>
-                </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-brand-600"></i> Privacy First</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">All processing happens locally in your browser. Nothing you type or upload is sent to any server.</p>
             </div>
-
-            <!-- TOOL 3: Duplicate Line Remover -->
-            <div id="duplicate-tool" class="tool-card bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-                <h3 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-filter text-cyan-400 mr-2"></i> Remove Duplicate Lines</h3>
-                <p class="text-slate-400 text-sm mb-4">Paste your list to remove redundant duplicate entries and sort lines.</p>
-                
-                <textarea id="dup-input" rows="5" placeholder="Item 1&#10;Item 2&#10;Item 1" 
-                    class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl text-white focus:outline-none focus:border-brand-accent transition mb-4"></textarea>
-
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="removeDuplicates()" class="px-4 py-2 bg-cyan-600 hover:bg-cyan-500 text-xs font-semibold rounded-lg text-white">Remove Duplicates</button>
-                    <button onclick="sortLines()" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white">Sort Alphabetically</button>
-                    <button onclick="copyToClipboard('dup-input')" class="ml-auto px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white"><i class="fa-solid fa-copy mr-1"></i> Copy Result</button>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- CATEGORY 2: IMAGE & GRAPHIC TOOLS -->
-        <section id="webp-tool" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-3">
-                <i class="fa-solid fa-image text-emerald-400"></i> Image & Graphics Suite
-            </h2>
-
-            <!-- TOOL 4: Image to WebP Converter -->
-            <div class="tool-card bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-                <h3 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-file-image text-emerald-400 mr-2"></i> Image to WebP Converter</h3>
-                <p class="text-slate-400 text-sm mb-4">Select any PNG or JPG image to convert it directly to fast WebP format inside your browser.</p>
-
-                <div class="space-y-4">
-                    <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <input type="file" id="webp-file-input" accept="image/*" class="text-sm text-slate-400 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-xs file:font-semibold file:bg-brand-600 file:text-white hover:file:bg-brand-500">
-                        <div class="flex items-center gap-2 text-xs text-slate-300">
-                            <label>Quality:</label>
-                            <input type="range" id="webp-quality" min="0.1" max="1" step="0.1" value="0.8" class="accent-brand-accent">
-                        </div>
-                        <button onclick="convertImageToWebP()" class="px-5 py-2 bg-emerald-600 hover:bg-emerald-500 text-xs font-semibold rounded-lg text-white"><i class="fa-solid fa-bolt mr-1"></i> Convert Now</button>
-                    </div>
-
-                    <!-- Preview & Download -->
-                    <div class="flex flex-col items-center gap-4 pt-4 border-t border-slate-800">
-                        <img id="webp-preview" class="max-h-60 rounded-lg hidden border border-slate-700" alt="WebP Output Preview">
-                        <a id="webp-download" class="hidden px-6 py-2 bg-brand-600 hover:bg-brand-500 text-xs font-bold rounded-lg text-white"><i class="fa-solid fa-download mr-1"></i> Download WebP Image</a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- TOOL 5: SVG Viewer & Editor -->
-            <div id="svg-studio" class="tool-card bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-                <h3 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-vector-square text-purple-400 mr-2"></i> SVG Viewer & Live Code Preview</h3>
-                <p class="text-slate-400 text-sm mb-4">Paste raw SVG code to render live visual vector graphics.</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div>
-                        <textarea id="svg-input" oninput="updateSvgPreview()" rows="8" placeholder='<svg width="100" height="100"><circle cx="50" cy="50" r="40" fill="#06b6d4" /></svg>' 
-                            class="w-full p-4 bg-slate-950 border border-slate-800 rounded-xl text-white text-xs font-mono focus:outline-none focus:border-brand-accent transition"></textarea>
-                    </div>
-                    <div class="bg-slate-950 border border-slate-800 rounded-xl p-4 flex items-center justify-center min-h-[160px]" id="svg-preview-container">
-                        <span class="text-xs text-slate-500">Live SVG Render Preview</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-
-        <!-- CATEGORY 3: SEO TOOLS -->
-        <section id="meta-tool" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-3">
-                <i class="fa-solid fa-chart-line text-amber-400"></i> SEO & Metadata Suite
-            </h2>
-
-            <!-- TOOL 6: Meta Tag & OpenGraph Generator -->
-            <div class="tool-card bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-                <h3 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-tags text-amber-400 mr-2"></i> Meta Tag & OpenGraph Generator</h3>
-                <p class="text-slate-400 text-sm mb-6">Fill in site info to auto-generate Meta Tags, Facebook OpenGraph, and Twitter Cards.</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <input type="text" id="meta-title" placeholder="Site Title" class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white">
-                    <input type="text" id="meta-url" placeholder="Canonical URL (https://example.com)" class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white">
-                    <input type="text" id="meta-keys" placeholder="Keywords (separated by comma)" class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white">
-                    <input type="text" id="meta-img" placeholder="OG Image URL (https://example.com/og.jpg)" class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white">
-                    <textarea id="meta-desc" rows="2" placeholder="Meta Description" class="md:col-span-2 p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white"></textarea>
-                </div>
-
-                <div class="flex gap-2 mb-4">
-                    <button onclick="generateMetaTags()" class="px-5 py-2 bg-amber-600 hover:bg-amber-500 text-xs font-semibold rounded-lg text-white">Generate Tags</button>
-                    <button onclick="copyToClipboard('meta-output')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white"><i class="fa-solid fa-copy mr-1"></i> Copy HTML Code</button>
-                </div>
-
-                <pre id="meta-output" class="p-4 bg-slate-950 border border-slate-800 rounded-xl text-xs font-mono text-emerald-400 overflow-x-auto min-h-[100px]">Click 'Generate Tags' to see code...</pre>
-            </div>
-
-            <!-- TOOL 7: Robots.txt Generator -->
-            <div id="robots-tool" class="tool-card bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-                <h3 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-robot text-rose-400 mr-2"></i> Robots.txt Generator</h3>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
-                    <input type="text" id="robots-ua" value="*" placeholder="User-Agent (*)" class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white">
-                    <input type="text" id="robots-allow" value="/" placeholder="Allow Directive (/)" class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white">
-                    <input type="text" id="robots-sitemap" placeholder="Sitemap URL (optional)" class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white">
-                </div>
-                <button onclick="generateRobotsTxt()" class="px-4 py-2 bg-rose-600 hover:bg-rose-500 text-xs font-semibold rounded-lg text-white mb-4">Create Robots.txt</button>
-                <pre id="robots-output" class="p-4 bg-slate-950 border border-slate-800 rounded-xl text-xs font-mono text-slate-300">User-agent: *&#10;Allow: /</pre>
-            </div>
-        </section>
-
-
-        <!-- CATEGORY 4: DEVELOPER TOOLS -->
-        <section id="json-tool" class="space-y-8">
-            <h2 class="text-2xl font-bold text-white border-b border-slate-800 pb-3 flex items-center gap-3">
-                <i class="fa-solid fa-code text-sky-400"></i> Developer & Code Utilities
-            </h2>
-
-            <!-- TOOL 8: JSON Formatter & Validator -->
-            <div class="tool-card bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-                <h3 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-code-commit text-sky-400 mr-2"></i> JSON Formatter & Validator</h3>
-                <p class="text-slate-400 text-sm mb-4">Paste unformatted JSON to beautify, minify, or validate syntax.</p>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <textarea id="json-input" rows="6" placeholder='{"name":"TextCraft","status":true}' class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs font-mono text-white"></textarea>
-                    <textarea id="json-output" readonly rows="6" placeholder="Formatted Output..." class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs font-mono text-cyan-400"></textarea>
-                </div>
-
-                <div class="flex gap-2">
-                    <button onclick="processJSON('format')" class="px-4 py-2 bg-sky-600 hover:bg-sky-500 text-xs font-semibold rounded-lg text-white">Beautify JSON</button>
-                    <button onclick="processJSON('minify')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white">Minify JSON</button>
-                    <button onclick="copyToClipboard('json-output')" class="ml-auto px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white"><i class="fa-solid fa-copy mr-1"></i> Copy Output</button>
-                </div>
-            </div>
-
-            <!-- TOOL 9: Base64 Encoder / Decoder -->
-            <div id="base64-tool" class="tool-card bg-slate-900 border border-slate-800 rounded-2xl p-6 shadow-xl">
-                <h3 class="text-xl font-bold text-white mb-2"><i class="fa-solid fa-lock text-violet-400 mr-2"></i> Base64 Encoder / Decoder</h3>
-                
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <textarea id="b64-input" rows="4" placeholder="Type plain text or base64 code..." class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs text-white"></textarea>
-                    <textarea id="b64-output" readonly rows="4" placeholder="Result output..." class="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs font-mono text-violet-400"></textarea>
-                </div>
-
-                <div class="flex gap-2">
-                    <button onclick="processBase64('encode')" class="px-4 py-2 bg-violet-600 hover:bg-violet-500 text-xs font-semibold rounded-lg text-white">Encode to Base64</button>
-                    <button onclick="processBase64('decode')" class="px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white">Decode Base64</button>
-                    <button onclick="copyToClipboard('b64-output')" class="ml-auto px-4 py-2 bg-slate-800 hover:bg-slate-700 text-xs font-semibold rounded-lg text-white"><i class="fa-solid fa-copy mr-1"></i> Copy</button>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEO Content Article -->
-        <article class="prose prose-invert max-w-none bg-slate-900/40 p-8 sm:p-12 rounded-3xl border border-slate-800 text-slate-300">
-            <h2 class="text-2xl font-bold text-white mb-4">Why Choose TextCraft Studio Utilities?</h2>
-            <p class="text-sm leading-relaxed">
-                TextCraft Studio provides lightweight, lightning-fast utilities built with privacy-first browser execution. Unlike standard online converters that upload your data to third-party servers, all file conversions, JSON syntax validations, and string calculations are handled entirely in your web browser memory.
-            </p>
-        </article>
-
-        <!-- FAQs -->
-        <section id="faqs" class="space-y-4 max-w-3xl mx-auto">
-            <h2 class="text-2xl font-bold text-white text-center mb-6">Frequently Asked Questions</h2>
-            <div class="p-5 rounded-xl bg-slate-900 border border-slate-800">
-                <h3 class="font-bold text-white text-sm">Is my data secure?</h3>
-                <p class="text-slate-400 text-xs mt-1">Yes, 100%. All processing runs client-side inside your browser via JavaScript. Nothing is uploaded to any server.</p>
-            </div>
-        </section>
-
+        </aside>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-slate-900 border-t border-slate-800 py-8 text-center text-xs text-slate-500">
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
         &copy; 2026 TextCraft Studio. All rights reserved.
     </footer>
 
-
-    <!-- JAVASCRIPT LOGIC FOR ALL 9 WORKING TOOLS -->
     <script>
-        // 1. WORD & CHARACTER COUNTER LOGIC
-        function processTextStats() {
-            const text = document.getElementById('wc-input').value;
-            const words = text.trim() ? text.trim().split(/\s+/).length : 0;
-            const chars = text.length;
-            const charsNoSpace = text.replace(/\s/g, '').length;
-            const sentences = text.trim() ? text.split(/[.!?]+/).filter(Boolean).length : 0;
-            const lines = text.trim() ? text.split(/\r\n|\r|\n/).length : 0;
-            const readingTime = Math.ceil(words / 200);
-
-            document.getElementById('wc-words').innerText = words;
-            document.getElementById('wc-chars').innerText = chars;
-            document.getElementById('wc-chars-nospace').innerText = charsNoSpace;
-            document.getElementById('wc-sentences').innerText = sentences;
-            document.getElementById('wc-lines').innerText = lines;
-            document.getElementById('wc-reading-time').innerText = readingTime + ' min';
-        }
-
-        // 2. TEXT CASE CONVERTER LOGIC
-        function convertCase(mode) {
-            const el = document.getElementById('case-input');
-            let txt = el.value;
-            if(!txt) return;
-
-            if (mode === 'upper') txt = txt.toUpperCase();
-            if (mode === 'lower') txt = txt.toLowerCase();
-            if (mode === 'title') txt = txt.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.substr(1).toLowerCase());
-            if (mode === 'sentence') txt = txt.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, c => c.toUpperCase());
-            if (mode === 'slug') txt = txt.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '');
-            if (mode === 'camel') txt = txt.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
-
-            el.value = txt;
-        }
-
-        // 3. DUPLICATE REMOVER LOGIC
-        function removeDuplicates() {
-            const el = document.getElementById('dup-input');
-            const lines = el.value.split(/\r?\n/);
-            const unique = [...new Set(lines)];
-            el.value = unique.join('\n');
-        }
-        function sortLines() {
-            const el = document.getElementById('dup-input');
-            const lines = el.value.split(/\r?\n/);
-            lines.sort();
-            el.value = lines.join('\n');
-        }
-
-        // 4. IMAGE TO WEBP CONVERTER LOGIC
-        function convertImageToWebP() {
-            const fileInput = document.getElementById('webp-file-input');
-            const quality = parseFloat(document.getElementById('webp-quality').value) || 0.8;
-            if (!fileInput.files || !fileInput.files[0]) return alert('Please select an image file first.');
-
-            const file = fileInput.files[0];
-            const reader = new FileReader();
-
-            reader.onload = function(e) {
-                const img = new Image();
-                img.onload = function() {
-                    const canvas = document.createElement('canvas');
-                    canvas.width = img.width;
-                    canvas.height = img.height;
-                    const ctx = canvas.getContext('2d');
-                    ctx.drawImage(img, 0, 0);
-
-                    const webpDataUrl = canvas.toDataURL('image/webp', quality);
-
-                    const previewImg = document.getElementById('webp-preview');
-                    previewImg.src = webpDataUrl;
-                    previewImg.classList.remove('hidden');
-
-                    const downloadBtn = document.getElementById('webp-download');
-                    downloadBtn.href = webpDataUrl;
-                    downloadBtn.download = file.name.replace(/\.[^/.]+$/, "") + ".webp";
-                    downloadBtn.classList.remove('hidden');
-                };
-                img.src = e.target.result;
-            };
-            reader.readAsDataURL(file);
-        }
-
-        // 5. SVG LIVE PREVIEW LOGIC
-        function updateSvgPreview() {
-            const code = document.getElementById('svg-input').value;
-            document.getElementById('svg-preview-container').innerHTML = code;
-        }
-
-        // 6. META TAG GENERATOR LOGIC
-        function generateMetaTags() {
-            const title = document.getElementById('meta-title').value || 'My Website Title';
-            const url = document.getElementById('meta-url').value || 'https://example.com';
-            const desc = document.getElementById('meta-desc').value || 'My Website Description';
-            const keys = document.getElementById('meta-keys').value || 'keywords, list';
-            const img = document.getElementById('meta-img').value || 'https://example.com/og.jpg';
-
-            const code = `<!-- Primary Meta Tags -->\n<title>${title}</title>\n<meta name="title" content="${title}">\n<meta name="description" content="${desc}">\n<meta name="keywords" content="${keys}">\n\n<!-- Open Graph / Facebook -->\n<meta property="og:type" content="website">\n<meta property="og:url" content="${url}">\n<meta property="og:title" content="${title}">\n<meta property="og:description" content="${desc}">\n<meta property="og:image" content="${img}">\n\n<!-- Twitter -->\n<meta property="twitter:card" content="summary_large_image">\n<meta property="twitter:url" content="${url}">\n<meta property="twitter:title" content="${title}">\n<meta property="twitter:description" content="${desc}">\n<meta property="twitter:image" content="${img}">`;
-
-            document.getElementById('meta-output').innerText = code;
-        }
-
-        // 7. ROBOTS.TXT LOGIC
-        function generateRobotsTxt() {
-            const ua = document.getElementById('robots-ua').value || '*';
-            const allow = document.getElementById('robots-allow').value || '/';
-            const sitemap = document.getElementById('robots-sitemap').value;
-
-            let text = `User-agent: ${ua}\nAllow: ${allow}\n`;
-            if (sitemap) text += `Sitemap: ${sitemap}\n`;
-
-            document.getElementById('robots-output').innerText = text;
-        }
-
-        // 8. JSON FORMATTER LOGIC
-        function processJSON(action) {
-            const input = document.getElementById('json-input').value;
-            const outputEl = document.getElementById('json-output');
-            try {
-                const parsed = JSON.parse(input);
-                if (action === 'format') outputEl.value = JSON.stringify(parsed, null, 2);
-                if (action === 'minify') outputEl.value = JSON.stringify(parsed);
-            } catch (e) {
-                outputEl.value = "Error: Invalid JSON syntax (" + e.message + ")";
-            }
-        }
-
-        // 9. BASE64 LOGIC
-        function processBase64(action) {
-            const input = document.getElementById('b64-input').value;
-            const outputEl = document.getElementById('b64-output');
-            try {
-                if (action === 'encode') outputEl.value = btoa(unescape(encodeURIComponent(input)));
-                if (action === 'decode') outputEl.value = decodeURIComponent(escape(atob(input)));
-            } catch (e) {
-                outputEl.value = "Error processing Base64: " + e.message;
-            }
-        }
-
-        // UTILITY: COPY TO CLIPBOARD
-        function copyToClipboard(elementId) {
-            const el = document.getElementById(elementId);
-            const val = el.value || el.innerText;
-            if(!val) return alert("Nothing to copy!");
-
-            navigator.clipboard.writeText(val).then(() => {
-                alert("Copied to clipboard!");
-            }).catch(err => {
-                alert("Failed to copy: " + err);
-            });
-        }
-
-        // SEARCH FILTER FOR TOOL CARDS
         document.getElementById('toolSearch').addEventListener('keyup', function(e) {
             const term = e.target.value.toLowerCase();
-            const cards = document.querySelectorAll('.tool-card');
-            cards.forEach(card => {
-                const text = card.textContent.toLowerCase();
-                card.style.display = text.includes(term) ? "block" : "none";
+            document.querySelectorAll('.tool-link').forEach(function(link){
+                const text = link.textContent.toLowerCase();
+                link.style.display = text.includes(term) ? "flex" : "none";
             });
         });
     </script>

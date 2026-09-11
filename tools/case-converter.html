@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Case Converter - Free Online Tool | TextCraft Studio</title>
+    <meta name="description" content="Convert text to UPPERCASE, lowercase, Title Case, Sentence case, url-slug-format or camelCase instantly.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://craftsuite-central.craftsuite-hub.workers.dev/tools/case-converter.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/tools/case-converter.html" />
+    <meta property="og:title" content="Text Case Converter - Free Online Tool | TextCraft Studio" />
+    <meta property="og:description" content="Convert text to UPPERCASE, lowercase, Title Case, Sentence case, url-slug-format or camelCase instantly." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Text Case Converter - Free Online Tool | TextCraft Studio" />
+    <meta name="twitter:description" content="Convert text to UPPERCASE, lowercase, Title Case, Sentence case, url-slug-format or camelCase instantly." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#eef2ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', accent: '#06b6d4' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/"},
+        {"@type": "ListItem", "position": 2, "name": "Text Tools", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/#text-tools"},
+        {"@type": "ListItem", "position": 3, "name": "Text Case Converter", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/tools/case-converter.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Text Case Converter",
+      "url": "https://craftsuite-central.craftsuite-hub.workers.dev/tools/case-converter.html",
+      "applicationCategory": "TextApplication",
+      "operatingSystem": "Any (Web Browser)",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-3 shrink-0">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white font-bold shadow-sm">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <span class="font-extrabold text-lg tracking-tight text-slate-900">
+                    TextCraft<span class="text-brand-600">Studio</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+                <a href="/#text-tools" class="hover:text-brand-600 transition">Text Tools</a>
+                <a href="/#image-tools" class="hover:text-brand-600 transition">Image Tools</a>
+                <a href="/#seo-tools" class="hover:text-brand-600 transition">SEO Tools</a>
+                <a href="/#dev-tools" class="hover:text-brand-600 transition">Dev Tools</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 text-xs text-slate-500">
+        <a href="/" class="hover:text-brand-600">Home</a>
+        <span class="mx-1">/</span>
+        <a href="/#text-tools" class="hover:text-brand-600">Text Tools</a>
+        <span class="mx-1">/</span>
+        <span class="text-slate-700 font-medium">Text Case Converter</span>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div class="lg:col-span-3 space-y-8">
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <h1 class="text-2xl font-extrabold text-slate-900 mb-1"><i class="fa-solid fa-text-height text-brand-600 mr-2"></i>Text Case Converter</h1>
+                <p class="text-slate-500 text-sm mb-6">Convert text to UPPERCASE, lowercase, Title Case, Sentence case, url-slug-format or camelCase instantly.</p>
+
+                <textarea id="case-input" rows="6" placeholder="Enter text to convert..."
+                    class="w-full p-4 bg-slate-50 border border-slate-200 rounded-xl text-slate-800 focus:outline-none focus:border-brand-500 transition mb-4"></textarea>
+                <div class="flex flex-wrap gap-2">
+                    <button onclick="convertCase('upper')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-xs font-semibold rounded-lg text-slate-700">UPPERCASE</button>
+                    <button onclick="convertCase('lower')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-xs font-semibold rounded-lg text-slate-700">lowercase</button>
+                    <button onclick="convertCase('title')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-xs font-semibold rounded-lg text-slate-700">Title Case</button>
+                    <button onclick="convertCase('sentence')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-xs font-semibold rounded-lg text-slate-700">Sentence case</button>
+                    <button onclick="convertCase('slug')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-xs font-semibold rounded-lg text-slate-700">url-slug-format</button>
+                    <button onclick="convertCase('camel')" class="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-xs font-semibold rounded-lg text-slate-700">camelCase</button>
+                    <button onclick="copyToClipboard('case-input')" class="ml-auto px-4 py-2 bg-brand-600 hover:bg-brand-700 text-xs font-semibold rounded-lg text-white"><i class="fa-solid fa-copy mr-1"></i> Copy Text</button>
+                </div>
+
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-3">How to use the Text Case Converter</h2>
+                <ol class="list-decimal list-inside text-sm text-slate-600 space-y-2">
+                    <li>Type or paste your text into the box.</li>
+                    <li>Click the case style you need - the text updates in place.</li>
+                    <li>Press Copy Text to copy the converted result.</li>
+                </ol>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">What is url-slug-format used for?</h3>
+                        <p class="text-sm text-slate-500 mt-1">It turns a title into a clean, hyphenated URL slug, e.g. 'My Blog Post' becomes 'my-blog-post'.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Can I convert code variable names?</h3>
+                        <p class="text-sm text-slate-500 mt-1">Yes, use camelCase for JavaScript-style variable naming.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                <h2 class="text-sm font-bold text-slate-900 mb-3">Related Tools</h2>
+                <div class="flex flex-wrap gap-2">
+                    <a href="/tools/word-counter.html" class="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition">Word Counter</a>
+                    <a href="/tools/duplicate-remover.html" class="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition">Duplicate Line Remover</a>
+                </div>
+            </div>
+        </div>
+
+        <aside class="space-y-6">
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-fire text-orange-500"></i> Popular Tools</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/tools/json-formatter.html" class="text-slate-600 hover:text-brand-600">JSON Formatter</a></li>
+                    <li><a href="/tools/word-counter.html" class="text-slate-600 hover:text-brand-600">Word Counter</a></li>
+                    <li><a href="/tools/webp-converter.html" class="text-slate-600 hover:text-brand-600">Image to WebP</a></li>
+                    <li><a href="/tools/meta-tag-generator.html" class="text-slate-600 hover:text-brand-600">Meta Tag Generator</a></li>
+                    <li><a href="/tools/base64-converter.html" class="text-slate-600 hover:text-brand-600">Base64 Encoder</a></li>
+                </ul>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-brand-600"></i> Privacy First</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">This tool runs entirely in your browser. Nothing you type or upload is sent to any server.</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+        &copy; 2026 TextCraft Studio. All rights reserved.
+    </footer>
+
+    <script>
+        function convertCase(mode) {
+            const el = document.getElementById('case-input');
+            let txt = el.value;
+            if (!txt) return;
+            if (mode === 'upper') txt = txt.toUpperCase();
+            if (mode === 'lower') txt = txt.toLowerCase();
+            if (mode === 'title') txt = txt.replace(/\w\S*/g, w => w.charAt(0).toUpperCase() + w.substr(1).toLowerCase());
+            if (mode === 'sentence') txt = txt.toLowerCase().replace(/(^\s*\w|[\.\!\?]\s*\w)/g, c => c.toUpperCase());
+            if (mode === 'slug') txt = txt.toLowerCase().trim().replace(/[^\w\s-]/g, '').replace(/[\s_-]+/g, '-').replace(/^-+|-+$/g, '');
+            if (mode === 'camel') txt = txt.toLowerCase().replace(/[^a-zA-Z0-9]+(.)/g, (m, chr) => chr.toUpperCase());
+            el.value = txt;
+        }
+        function copyToClipboard(elementId) {
+            const el = document.getElementById(elementId);
+            const val = el.value || el.innerText;
+            if (!val) return alert("Nothing to copy!");
+            navigator.clipboard.writeText(val).then(() => alert("Copied to clipboard!")).catch(err => alert("Failed to copy: " + err));
+        }
+    </script>
+</body>
+</html>

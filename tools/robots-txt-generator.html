@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robots.txt Generator - Free Online Tool | TextCraft Studio</title>
+    <meta name="description" content="Create a valid robots.txt file for your website in seconds.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://craftsuite-central.craftsuite-hub.workers.dev/tools/robots-txt-generator.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/tools/robots-txt-generator.html" />
+    <meta property="og:title" content="Robots.txt Generator - Free Online Tool | TextCraft Studio" />
+    <meta property="og:description" content="Create a valid robots.txt file for your website in seconds." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Robots.txt Generator - Free Online Tool | TextCraft Studio" />
+    <meta name="twitter:description" content="Create a valid robots.txt file for your website in seconds." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#eef2ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', accent: '#06b6d4' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/"},
+        {"@type": "ListItem", "position": 2, "name": "SEO Tools", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/#seo-tools"},
+        {"@type": "ListItem", "position": 3, "name": "Robots.txt Generator", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/tools/robots-txt-generator.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Robots.txt Generator",
+      "url": "https://craftsuite-central.craftsuite-hub.workers.dev/tools/robots-txt-generator.html",
+      "applicationCategory": "SEOApplication",
+      "operatingSystem": "Any (Web Browser)",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-3 shrink-0">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white font-bold shadow-sm">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <span class="font-extrabold text-lg tracking-tight text-slate-900">
+                    TextCraft<span class="text-brand-600">Studio</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center gap-6 text-sm font-semibold text-slate-600">
+                <a href="/#text-tools" class="hover:text-brand-600 transition">Text Tools</a>
+                <a href="/#image-tools" class="hover:text-brand-600 transition">Image Tools</a>
+                <a href="/#seo-tools" class="hover:text-brand-600 transition">SEO Tools</a>
+                <a href="/#dev-tools" class="hover:text-brand-600 transition">Dev Tools</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 text-xs text-slate-500">
+        <a href="/" class="hover:text-brand-600">Home</a>
+        <span class="mx-1">/</span>
+        <a href="/#seo-tools" class="hover:text-brand-600">SEO Tools</a>
+        <span class="mx-1">/</span>
+        <span class="text-slate-700 font-medium">Robots.txt Generator</span>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div class="lg:col-span-3 space-y-8">
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <h1 class="text-2xl font-extrabold text-slate-900 mb-1"><i class="fa-solid fa-robot text-amber-600 mr-2"></i>Robots.txt Generator</h1>
+                <p class="text-slate-500 text-sm mb-6">Create a valid robots.txt file for your website in seconds.</p>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+                    <input type="text" id="robots-ua" value="*" placeholder="User-Agent (*)" class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800">
+                    <input type="text" id="robots-allow" value="/" placeholder="Allow Directive (/)" class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800">
+                    <input type="text" id="robots-sitemap" placeholder="Sitemap URL (optional)" class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-xs text-slate-800">
+                </div>
+                <button onclick="generateRobotsTxt()" class="px-4 py-2 bg-amber-600 hover:bg-amber-700 text-xs font-semibold rounded-lg text-white mb-4">Create Robots.txt</button>
+                <pre id="robots-output" class="p-4 bg-slate-900 border border-slate-800 rounded-xl text-xs font-mono text-slate-200">User-agent: *&#10;Allow: /</pre>
+
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-3">How to use the Robots.txt Generator</h2>
+                <ol class="list-decimal list-inside text-sm text-slate-600 space-y-2">
+                    <li>Set the User-Agent (use * for all crawlers).</li>
+                    <li>Set the Allow directive and optionally add your sitemap URL.</li>
+                    <li>Click Create Robots.txt, copy the output and upload it as robots.txt at your site root.</li>
+                </ol>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Where should robots.txt be placed?</h3>
+                        <p class="text-sm text-slate-500 mt-1">At the root of your domain, e.g. https://example.com/robots.txt.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Does robots.txt block a page from Google entirely?</h3>
+                        <p class="text-sm text-slate-500 mt-1">It only discourages crawling; use a noindex meta tag to prevent a page from being indexed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                <h2 class="text-sm font-bold text-slate-900 mb-3">Related Tools</h2>
+                <div class="flex flex-wrap gap-2">
+                    <a href="/tools/meta-tag-generator.html" class="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition">Meta Tag Generator</a>
+                </div>
+            </div>
+        </div>
+
+        <aside class="space-y-6">
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-fire text-orange-500"></i> Popular Tools</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/tools/json-formatter.html" class="text-slate-600 hover:text-brand-600">JSON Formatter</a></li>
+                    <li><a href="/tools/word-counter.html" class="text-slate-600 hover:text-brand-600">Word Counter</a></li>
+                    <li><a href="/tools/webp-converter.html" class="text-slate-600 hover:text-brand-600">Image to WebP</a></li>
+                    <li><a href="/tools/meta-tag-generator.html" class="text-slate-600 hover:text-brand-600">Meta Tag Generator</a></li>
+                    <li><a href="/tools/base64-converter.html" class="text-slate-600 hover:text-brand-600">Base64 Encoder</a></li>
+                </ul>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-brand-600"></i> Privacy First</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">This tool runs entirely in your browser. Nothing you type or upload is sent to any server.</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+        &copy; 2026 TextCraft Studio. All rights reserved.
+    </footer>
+
+    <script>
+        function generateRobotsTxt() {
+            const ua = document.getElementById('robots-ua').value || '*';
+            const allow = document.getElementById('robots-allow').value || '/';
+            const sitemap = document.getElementById('robots-sitemap').value;
+            let text = `User-agent: ${ua}\nAllow: ${allow}\n`;
+            if (sitemap) text += `Sitemap: ${sitemap}\n`;
+            document.getElementById('robots-output').innerText = text;
+        }
+    </script>
+</body>
+</html>
