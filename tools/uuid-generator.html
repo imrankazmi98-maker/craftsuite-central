@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UUID Generator - Free Online Tool | TextCraft Studio</title>
+    <meta name="description" content="Generate random, unique v4 UUIDs / GUIDs for use in databases, code and configuration.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://craftsuite-central.craftsuite-hub.workers.dev/tools/uuid-generator.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/tools/uuid-generator.html" />
+    <meta property="og:title" content="UUID Generator - Free Online Tool | TextCraft Studio" />
+    <meta property="og:description" content="Generate random, unique v4 UUIDs / GUIDs for use in databases, code and configuration." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="UUID Generator - Free Online Tool | TextCraft Studio" />
+    <meta name="twitter:description" content="Generate random, unique v4 UUIDs / GUIDs for use in databases, code and configuration." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#eef2ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', accent: '#06b6d4' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/"},
+        {"@type": "ListItem", "position": 2, "name": "Website Management Tools", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/#webmgmt-tools"},
+        {"@type": "ListItem", "position": 3, "name": "UUID Generator", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/tools/uuid-generator.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "UUID Generator",
+      "url": "https://craftsuite-central.craftsuite-hub.workers.dev/tools/uuid-generator.html",
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Any (Web Browser)",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-3 shrink-0">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white font-bold shadow-sm">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <span class="font-extrabold text-lg tracking-tight text-slate-900">
+                    TextCraft<span class="text-brand-600">Studio</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center gap-5 text-xs font-semibold text-slate-600 overflow-x-auto">
+                <a href="/#text-tools" class="hover:text-brand-600 transition whitespace-nowrap">Text</a>
+                <a href="/#image-tools" class="hover:text-brand-600 transition whitespace-nowrap">Image</a>
+                <a href="/#seo-tools" class="hover:text-brand-600 transition whitespace-nowrap">SEO</a>
+                <a href="/#dev-tools" class="hover:text-brand-600 transition whitespace-nowrap">Dev</a>
+                <a href="/#calculator-tools" class="hover:text-brand-600 transition whitespace-nowrap">Calculators</a>
+                <a href="/#unit-tools" class="hover:text-brand-600 transition whitespace-nowrap">Unit</a>
+                <a href="/#binary-tools" class="hover:text-brand-600 transition whitespace-nowrap">Binary</a>
+                <a href="/#webmgmt-tools" class="hover:text-brand-600 transition whitespace-nowrap">Web Mgmt</a>
+                <a href="/#other-tools" class="hover:text-brand-600 transition whitespace-nowrap">Other</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 text-xs text-slate-500">
+        <a href="/" class="hover:text-brand-600">Home</a>
+        <span class="mx-1">/</span>
+        <a href="/#webmgmt-tools" class="hover:text-brand-600">Website Management Tools</a>
+        <span class="mx-1">/</span>
+        <span class="text-slate-700 font-medium">UUID Generator</span>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div class="lg:col-span-3 space-y-8">
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <h1 class="text-2xl font-extrabold text-slate-900 mb-1"><i class="fa-solid fa-fingerprint text-orange-600 mr-2"></i>UUID Generator</h1>
+                <p class="text-slate-500 text-sm mb-6">Generate random, unique v4 UUIDs / GUIDs for use in databases, code and configuration.</p>
+
+                <div class="flex flex-col sm:flex-row items-center gap-3 mb-4">
+                    <label class="text-xs font-semibold text-slate-500">How many?</label>
+                    <input type="number" id="uuid-count" value="5" min="1" max="50" class="p-2 bg-slate-50 border border-slate-200 rounded-lg text-sm w-20">
+                    <button onclick="generateUUIDs()" class="px-5 py-2 bg-orange-600 hover:bg-orange-700 text-xs font-semibold rounded-lg text-white">Generate</button>
+                    <button onclick="copyUUIDs()" class="ml-auto px-4 py-2 bg-slate-100 hover:bg-slate-200 text-xs font-semibold rounded-lg text-slate-700"><i class="fa-solid fa-copy mr-1"></i> Copy All</button>
+                </div>
+                <textarea id="uuid-output" readonly rows="8" placeholder="Click Generate..." class="w-full p-3 bg-slate-900 border border-slate-800 rounded-xl text-xs font-mono text-orange-400"></textarea>
+
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-3">Why use this tool?</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">A UUID (v4) gives you a virtually collision-free unique identifier without needing a central database to hand them out - commonly used as primary keys, session tokens, or unique file names in software systems.</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-3">How to use the UUID Generator</h2>
+                <ol class="list-decimal list-inside text-sm text-slate-600 space-y-2">
+                    <li>Set how many UUIDs you need.</li>
+                    <li>Click Generate.</li>
+                    <li>Copy the list for use in your code or database.</li>
+                </ol>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Are these guaranteed unique?</h3>
+                        <p class="text-sm text-slate-500 mt-1">V4 UUIDs use 122 random bits, making collisions astronomically unlikely for practical purposes.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Are these cryptographically secure?</h3>
+                        <p class="text-sm text-slate-500 mt-1">Generation uses the browser's crypto API where available, suitable for identifiers but not as a substitute for dedicated secret/token generation.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                <h2 class="text-sm font-bold text-slate-900 mb-3">Related Tools</h2>
+                <div class="flex flex-wrap gap-2">
+                    <a href="/tools/password-generator.html" class="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition">Password Generator</a>
+                    <a href="/tools/url-encoder-decoder.html" class="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition">URL Encoder / Decoder</a>
+                </div>
+            </div>
+        </div>
+
+        <aside class="space-y-6">
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-fire text-orange-500"></i> Popular Tools</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/tools/json-formatter.html" class="text-slate-600 hover:text-brand-600">JSON Formatter</a></li>
+                    <li><a href="/tools/word-counter.html" class="text-slate-600 hover:text-brand-600">Word Counter</a></li>
+                    <li><a href="/tools/age-calculator.html" class="text-slate-600 hover:text-brand-600">Age Calculator</a></li>
+                    <li><a href="/tools/password-generator.html" class="text-slate-600 hover:text-brand-600">Password Generator</a></li>
+                    <li><a href="/tools/base64-converter.html" class="text-slate-600 hover:text-brand-600">Base64 Encoder</a></li>
+                </ul>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-brand-600"></i> Privacy First</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">This tool runs entirely in your browser. Nothing you type or upload is sent to any server.</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+        &copy; 2026 TextCraft Studio. All rights reserved.
+    </footer>
+
+    <script>
+        function uuidv4() {
+            if (crypto.randomUUID) return crypto.randomUUID();
+            return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
+                const r = Math.random() * 16 | 0, v = c === 'x' ? r : (r & 0x3 | 0x8);
+                return v.toString(16);
+            });
+        }
+        function generateUUIDs() {
+            const count = Math.min(50, Math.max(1, parseInt(document.getElementById('uuid-count').value) || 1));
+            const list = [];
+            for (let i = 0; i < count; i++) list.push(uuidv4());
+            document.getElementById('uuid-output').value = list.join('\n');
+        }
+        function copyUUIDs() {
+            const val = document.getElementById('uuid-output').value;
+            if (!val) return alert('Nothing to copy!');
+            navigator.clipboard.writeText(val).then(() => alert('Copied to clipboard!'));
+        }
+    </script>
+</body>
+</html>

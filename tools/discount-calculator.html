@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discount Calculator - Free Online Tool | TextCraft Studio</title>
+    <meta name="description" content="Work out the final price and the amount you save on a discounted item.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://craftsuite-central.craftsuite-hub.workers.dev/tools/discount-calculator.html" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://craftsuite-central.craftsuite-hub.workers.dev/tools/discount-calculator.html" />
+    <meta property="og:title" content="Discount Calculator - Free Online Tool | TextCraft Studio" />
+    <meta property="og:description" content="Work out the final price and the amount you save on a discounted item." />
+
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Discount Calculator - Free Online Tool | TextCraft Studio" />
+    <meta name="twitter:description" content="Work out the final price and the amount you save on a discounted item." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { sans: ['Inter', 'sans-serif'] },
+                    colors: {
+                        brand: { 50: '#eef2ff', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', accent: '#06b6d4' }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/"},
+        {"@type": "ListItem", "position": 2, "name": "Online Calculators", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/#calculator-tools"},
+        {"@type": "ListItem", "position": 3, "name": "Discount Calculator", "item": "https://craftsuite-central.craftsuite-hub.workers.dev/tools/discount-calculator.html"}
+      ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Discount Calculator",
+      "url": "https://craftsuite-central.craftsuite-hub.workers.dev/tools/discount-calculator.html",
+      "applicationCategory": "UtilitiesApplication",
+      "operatingSystem": "Any (Web Browser)",
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+    }
+    </script>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <header class="sticky top-0 z-50 bg-white border-b border-slate-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between gap-4">
+            <a href="/" class="flex items-center gap-3 shrink-0">
+                <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-brand-600 to-brand-accent flex items-center justify-center text-white font-bold shadow-sm">
+                    <i class="fa-solid fa-wand-magic-sparkles"></i>
+                </div>
+                <span class="font-extrabold text-lg tracking-tight text-slate-900">
+                    TextCraft<span class="text-brand-600">Studio</span>
+                </span>
+            </a>
+            <nav class="hidden md:flex items-center gap-5 text-xs font-semibold text-slate-600 overflow-x-auto">
+                <a href="/#text-tools" class="hover:text-brand-600 transition whitespace-nowrap">Text</a>
+                <a href="/#image-tools" class="hover:text-brand-600 transition whitespace-nowrap">Image</a>
+                <a href="/#seo-tools" class="hover:text-brand-600 transition whitespace-nowrap">SEO</a>
+                <a href="/#dev-tools" class="hover:text-brand-600 transition whitespace-nowrap">Dev</a>
+                <a href="/#calculator-tools" class="hover:text-brand-600 transition whitespace-nowrap">Calculators</a>
+                <a href="/#unit-tools" class="hover:text-brand-600 transition whitespace-nowrap">Unit</a>
+                <a href="/#binary-tools" class="hover:text-brand-600 transition whitespace-nowrap">Binary</a>
+                <a href="/#webmgmt-tools" class="hover:text-brand-600 transition whitespace-nowrap">Web Mgmt</a>
+                <a href="/#other-tools" class="hover:text-brand-600 transition whitespace-nowrap">Other</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-4 text-xs text-slate-500">
+        <a href="/" class="hover:text-brand-600">Home</a>
+        <span class="mx-1">/</span>
+        <a href="/#calculator-tools" class="hover:text-brand-600">Online Calculators</a>
+        <span class="mx-1">/</span>
+        <span class="text-slate-700 font-medium">Discount Calculator</span>
+    </div>
+
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 grid grid-cols-1 lg:grid-cols-4 gap-8">
+        <div class="lg:col-span-3 space-y-8">
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 shadow-sm">
+                <h1 class="text-2xl font-extrabold text-slate-900 mb-1"><i class="fa-solid fa-tag text-violet-600 mr-2"></i>Discount Calculator</h1>
+                <p class="text-slate-500 text-sm mb-6">Work out the final price and the amount you save on a discounted item.</p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                    <div>
+                        <label class="text-xs font-semibold text-slate-500 block mb-1">Original Price</label>
+                        <input type="number" id="disc-price" class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 focus:outline-none focus:border-brand-500 transition w-full" placeholder="e.g. 2000" value="2000">
+                    </div>
+                    <div>
+                        <label class="text-xs font-semibold text-slate-500 block mb-1">Discount (%)</label>
+                        <input type="number" id="disc-percent" class="p-3 bg-slate-50 border border-slate-200 rounded-xl text-sm text-slate-800 focus:outline-none focus:border-brand-500 transition w-full" placeholder="e.g. 20" value="20">
+                    </div>
+                </div>
+                <button onclick="calcDiscount()" class="px-5 py-2 bg-violet-600 hover:bg-violet-700 text-xs font-semibold rounded-lg text-white mb-4">Calculate</button>
+                <div class="grid grid-cols-2 gap-3 text-center">
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200"><span class="block text-xl font-black text-violet-600" id="disc-final">-</span><span class="text-xs text-slate-500">Final Price</span></div>
+                    <div class="bg-slate-50 p-4 rounded-xl border border-slate-200"><span class="block text-xl font-black text-emerald-600" id="disc-saved">-</span><span class="text-xs text-slate-500">You Save</span></div>
+                </div>
+
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-3">Why use this tool?</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">Shoppers use this to quickly check whether a 'sale price' is actually a good deal, and sellers use it to price promotions consistently across a store or menu.</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-3">How to use the Discount Calculator</h2>
+                <ol class="list-decimal list-inside text-sm text-slate-600 space-y-2">
+                    <li>Enter the original price.</li>
+                    <li>Enter the discount percentage being offered.</li>
+                    <li>Click Calculate to see the final price and total savings.</li>
+                </ol>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-4">Frequently Asked Questions</h2>
+                <div class="space-y-4">
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Can I stack multiple discounts?</h3>
+                        <p class="text-sm text-slate-500 mt-1">Calculate the first discount, then run the result through the calculator again with the second discount percentage.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Does this include tax?</h3>
+                        <p class="text-sm text-slate-500 mt-1">No, this calculates the discount only; add tax separately if needed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6">
+                <h2 class="text-sm font-bold text-slate-900 mb-3">Related Tools</h2>
+                <div class="flex flex-wrap gap-2">
+                    <a href="/tools/percentage-calculator.html" class="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition">Percentage Calculator</a>
+                    <a href="/tools/age-calculator.html" class="text-xs font-medium px-3 py-1.5 rounded-full bg-slate-100 text-slate-600 hover:bg-brand-50 hover:text-brand-600 transition">Age Calculator</a>
+                </div>
+            </div>
+        </div>
+
+        <aside class="space-y-6">
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-3 flex items-center gap-2"><i class="fa-solid fa-fire text-orange-500"></i> Popular Tools</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="/tools/json-formatter.html" class="text-slate-600 hover:text-brand-600">JSON Formatter</a></li>
+                    <li><a href="/tools/word-counter.html" class="text-slate-600 hover:text-brand-600">Word Counter</a></li>
+                    <li><a href="/tools/age-calculator.html" class="text-slate-600 hover:text-brand-600">Age Calculator</a></li>
+                    <li><a href="/tools/password-generator.html" class="text-slate-600 hover:text-brand-600">Password Generator</a></li>
+                    <li><a href="/tools/base64-converter.html" class="text-slate-600 hover:text-brand-600">Base64 Encoder</a></li>
+                </ul>
+            </div>
+            <div class="bg-white border border-slate-200 rounded-xl p-5">
+                <h3 class="font-bold text-slate-900 text-sm mb-2 flex items-center gap-2"><i class="fa-solid fa-shield-halved text-brand-600"></i> Privacy First</h3>
+                <p class="text-xs text-slate-500 leading-relaxed">This tool runs entirely in your browser. Nothing you type or upload is sent to any server.</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer class="bg-white border-t border-slate-200 py-8 text-center text-xs text-slate-500">
+        &copy; 2026 TextCraft Studio. All rights reserved.
+    </footer>
+
+    <script>
+        function calcDiscount() {
+            const price = parseFloat(document.getElementById('disc-price').value);
+            const percent = parseFloat(document.getElementById('disc-percent').value);
+            if (isNaN(price) || isNaN(percent)) return;
+            const saved = price * (percent / 100);
+            const final = price - saved;
+            document.getElementById('disc-final').innerText = final.toFixed(2);
+            document.getElementById('disc-saved').innerText = saved.toFixed(2);
+        }
+    </script>
+</body>
+</html>
