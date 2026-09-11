@@ -107,6 +107,11 @@
             </div>
 
             <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-3">Why use this tool?</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">A correct robots.txt file tells search engine crawlers which parts of your site to crawl and which to skip, helping you avoid wasting crawl budget on admin pages, staging folders or duplicate content while making sure your important pages and sitemap are easy to find.</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
                 <h2 class="text-lg font-bold text-slate-900 mb-3">How to use the Robots.txt Generator</h2>
                 <ol class="list-decimal list-inside text-sm text-slate-600 space-y-2">
                     <li>Set the User-Agent (use * for all crawlers).</li>
@@ -125,6 +130,14 @@
                     <div>
                         <h3 class="text-sm font-semibold text-slate-800">Does robots.txt block a page from Google entirely?</h3>
                         <p class="text-sm text-slate-500 mt-1">It only discourages crawling; use a noindex meta tag to prevent a page from being indexed.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Can I block a specific folder only?</h3>
+                        <p class="text-sm text-slate-500 mt-1">Yes, add a Disallow line manually after generating the base file, e.g. 'Disallow: /admin/'.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Do I need one robots.txt for each subdomain?</h3>
+                        <p class="text-sm text-slate-500 mt-1">Yes, robots.txt only applies to the exact host it's served from, so each subdomain needs its own file if you want different rules.</p>
                     </div>
                 </div>
             </div>

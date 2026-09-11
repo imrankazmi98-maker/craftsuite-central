@@ -109,6 +109,11 @@
             </div>
 
             <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
+                <h2 class="text-lg font-bold text-slate-900 mb-3">Why use this tool?</h2>
+                <p class="text-sm text-slate-600 leading-relaxed">Developers reach for a JSON formatter when debugging an API response, cleaning up a config file, or making a minified payload readable before editing it. Validating syntax before deploying config changes also helps catch a missing comma or bracket before it causes a runtime error.</p>
+            </div>
+
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 sm:p-8">
                 <h2 class="text-lg font-bold text-slate-900 mb-3">How to use the JSON Formatter & Validator</h2>
                 <ol class="list-decimal list-inside text-sm text-slate-600 space-y-2">
                     <li>Paste your raw JSON into the left box.</li>
@@ -127,6 +132,14 @@
                     <div>
                         <h3 class="text-sm font-semibold text-slate-800">Is there a size limit?</h3>
                         <p class="text-sm text-slate-500 mt-1">It runs in your browser's memory, so very large files may be slow depending on your device.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Can this validate JSON Schema, not just syntax?</h3>
+                        <p class="text-sm text-slate-500 mt-1">No, it checks that the JSON is syntactically valid; it does not validate against a JSON Schema definition.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-sm font-semibold text-slate-800">Will it preserve the key order?</h3>
+                        <p class="text-sm text-slate-500 mt-1">Yes, beautifying and minifying preserve the original key order from your input.</p>
                     </div>
                 </div>
             </div>
